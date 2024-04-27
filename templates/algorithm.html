@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>DAA ASSIGNMENT</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='CSS/style.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='CSS/navigation.css') }}">
+  <link rel="icon" type="image/png" href="{{ url_for('static', filename='Images/logo.png') }}">
+  <style>
+    body {
+      background-color: rgb(0, 0, 0);
+      color: white; /* Set text color to white for better visibility */
+    }
+  </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <img src="{{ url_for('static', filename='Images/logo.png') }}" alt="logo" /> 
+        <div class="home">
+          <ul> 
+            <li><a  href="{{url_for('demonstrate')}}">   Demonstrate </a></li>
+            <li><a  href="{{url_for('documentation')}}">   Documentation </a></li>
+            <li><a  href="{{url_for('index')}}">   Home </a></li>
+          </ul>
+    
+        </div>
+        
+        <ul>
+          <li><a href="{{url_for('about_us')}}">About Us </a></li>
+          <li><a href="{{url_for('comp_analysis')}}">Complexity Analysis </a></li>
+          <!-- <li><a  href="">   Code Visualization</a></li> -->
+          <li><a  href="{{url_for('intro')}}">   Info </a></li>
+          <li><a  href="{{url_for('algowriteup')}}">  DP Algorithm </a></li>
+        </ul>
+  </div>
+ 
+  <nav>
+    <ul class="nav-ul">
+        <li><a href="">CS F364: DESIGN AND ANALYSIS OF ALGORITHMS</a></li>
+        <!-- <li><a href="intro.html">GROUP NUM  &rarr;</a></li> -->
+    </ul>
+    <ul class="nav-ul">
+      <li><a href="">ASSIGNMENT 2</a></li>
+      <!-- <li><a href="intro.html">GROUP NUM  &rarr;</a></li> -->
+  </ul>
+  
+  <h1>ALGORTIHM</h1>
+  <p>1. OPT(i,j) is the maximum number of base pairs in a secondary structure for b_ib_(i+1)...b_j</p>
+  <p>2. OPT(i,j) = 0 if i>= j-4.</p>
+  <p>3. In the optimal secondary structure on b_ib_(i+1)...b_j, 
+        <p>-> If j is not a member of any pair, use OPT(i,j-1).</p>
+        <p>-> If j pairs with some t < j-4, knot condition yields two independent subproblems: OPT(i,t-1) and OPT(t+1,j-1).</p>
+  </p>
+
+  <h3>RECURRENCE RELATION</h3>
+  <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MathJax Example</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <div class="introduction">
+        \[
+        OPT(i,j) = max 
+        \begin{cases}
+            OPT(i,j - 1) & \text{if j is not a member of any pair. }  \\
+            \max\limits_{t}(1 + OPT(i,t - 1) + OPT(t + 1, j - 1)) & \text{if j pairs with some t < j - 4}
+
+        \end{cases}
+        \]
+    </div>
+    <p>t ranges from i to j - 5, such that it is allowed to pair with j.</p>
+</body>
+</html>
+
+  
+
+  
+<div class="footer">
+  We, the students of BITS Pilani Hyderabad Campus, have created this webpage, as a part of the Assignment-1 of the course
+CS F364 - Design and Analysis of Algorithms (DAA).
+</div>
+</body>
+
+</html>

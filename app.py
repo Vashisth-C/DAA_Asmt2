@@ -53,5 +53,17 @@ def get_output():
         output_content = file.read()
     return output_content
 
+@app.route('/demonstrate')
+def demonstrate():
+    return render_template('demonstrate.html')
+
+@app.route('/algowriteup')
+def algowriteup():
+    return render_template('algowriteup.html')
+
+@app.route('/algorithm')
+def algorithm():
+    return render_template('algorithm.html')
+
 if __name__ == '__main__':
     app.run(debug=True)
