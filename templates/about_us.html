@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DAA ASSIGNMENT</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='CSS/style.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='CSS/navigation.css') }}">
+  <link rel="icon" type="image/png" href="{{ url_for('static', filename='Images/logo.png') }}">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: black;
+      padding: 0px;
+      max-width: 100%;
+      position: relative;
+    }
+    
+    h1 {
+      margin-top: 3%;
+      text-align: center;
+      color: white;
+    }
+    
+    .container {
+      max-width: 80%;
+      margin: 10px auto;
+    }
+    
+    .member {
+      display: flex;
+      background-color: black;
+      border-radius: 20px;
+      padding: 20px;
+      margin-bottom: 2px;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    }
+    
+    .member-image {
+      flex: 0 0 200px;
+      margin-right: 20px;
+    }
+    
+    .member-image img {
+      max-width: 100%;
+      border-radius: 5px;
+    }
+    
+    .member-content {
+      flex: 1;
+    }
+    
+    .member h2 {
+        color: white;
+    }
+    
+    .member p {
+      color: white;
+      font-size: 20px;
+    }
+  </style>
+</head>
+<body>
+    <div class="navbar">
+        <img src="{{ url_for('static', filename='Images/logo.png') }}" alt="logo" /> 
+        <div class="home">
+          <ul> 
+            <li><a  href="{{url_for('documentation')}}">   Documentation </a></li>
+            <li><a  href="{{url_for('index')}}">   Home </a></li>
+            
+          </ul>
+    
+        </div>
+        <ul>
+          <li><a href="{{url_for('about_us')}}">About Us </a></li>
+          <li><a href="{{url_for('comp_analysis')}}">Complexity Analysis </a></li>
+          <!-- <li><a  href="">   Code Visualization</a></li> -->
+          <li><a  href="{{url_for('intro')}}">   Info </a></li>
+        </ul>
+      </div>
+
+  <h1>MEET OUR TEAM!</h1>
+  
+
+<div class="container">
+    <div class="member">
+      <div class="member-content" style="text-align: justify;">
+        <h2>ROHAN POTHIREDDY</h2>
+        <p>ID: 2021A7PS0365H</p>
+        <p>Hey! I am Rohan Pothireddy, currently a CS undergrad at BITS Pilani, Hyderabad Campus. I have been captivated by the world of programming and its endless possibilities. I am constantly seeking opportunities to learn and grow, immersing myself in new technologies and techniques. I am fueled by the desire to make a meaningful impact in the field of software development. </p>
+      </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="member">
+      <div class="member-content" style="text-align: justify;">
+        <h2>SAKSHAM BAJAJ</h2>
+        <p>ID: 2021A7PS1315H</p>
+        <p>
+          Hey there! I'm Saksham Bajaj, currently studying Computer Science at BITS Pilani, Hyderabad Campus. I've got a real knack for
+           programming and I'm always on the lookout for cool new things to learn. Whether it's diving into fresh technologies or honing my problem-solving skills, 
+          I'm all in. I'm passionate about making a difference in the world of software development and I'm excited to see where this journey takes me!
+        </p>
+      </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="member">
+      <div class="member-content" style="text-align: justify;">
+        <h2>VASHISTH CHOUDHARI</h2>
+        <p>ID: 2021A7PS1989H</p>
+        <p>
+          Hey! I am Vashisth Choudhari, currently pursuing my undergrad at BITS Pilani, Hyderabad Campus in the field of Computer Science.
+          I always look for opportunities to expand my knowledge and learn new skills everyday. Through this project I bring to you all something fun 
+          and interesting in an interactive medium that will help you understand the concepts of the algorithms better. 
+        </p>
+      </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="member">
+      <div class="member-content" style="text-align: justify;">
+        <h2>KOLASANI AMIT VISHNU</h2>
+        <p>ID: 2021A7PS0151H</p>
+        <p>
+          Hey! I am Amit Vishnu Kolasani, currently a CS undergrad at BITS Pilani, Hyderabad Campus. I am passionate about programming and problem-solving. I am always eager to learn new things and explore new technologies. 
+          I am interested in the field of Software Development and I am always looking for opportunities to grow and make a meaningful impact in the field of computer science.
+        </p>
+      </div>
+    </div>
+</div>
+
+<div class="footer">
+    We, the students of BITS Pilani Hyderabad Campus, have created this webpage, as a part of the Assignment-1 of the course
+  CS F364 - Design and Analysis of Algorithms (DAA).
+  </div>
+</div>
+</body>
+</html>

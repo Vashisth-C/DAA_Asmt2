@@ -19,29 +19,28 @@
     <img src="{{ url_for('static', filename='Images/logo.png') }}" alt="logo" /> 
     <div class="home">
       <ul> 
-        <li><a  href="">   Documentation </a></li>
-        <li><a  href="">   Home </a></li>
+        <li><a  href="{{url_for('documentation')}}">   Documentation </a></li>
+        <li><a  href="{{url_for('index')}}">   Home </a></li>
         
       </ul>
 
     </div>
     
     <ul>
-      <li><a href="">About Us </a></li>
-      <li><a href="">Complexity Comparison </a></li>
-      <li><a  href="">   Jarvis March </a></li>
-      <li><a  href="">   KPS </a></li>
-      <li><a href="">Info </a></li>
+      <li><a href="{{url_for('about_us')}}">About Us </a></li>
+      <li><a href="{{url_for('comp_analysis')}}">Complexity Analysis </a></li>
+      <!-- <li><a  href="">   Code Visualization</a></li> -->
+      <li><a  href="{{url_for('intro')}}">   Info </a></li>
     </ul>
   </div>
-
+ 
   <nav>
     <ul class="nav-ul">
         <li><a href="">CS F364: DESIGN AND ANALYSIS OF ALGORITHMS</a></li>
         <!-- <li><a href="intro.html">GROUP NUM  &rarr;</a></li> -->
     </ul>
     <ul class="nav-ul">
-      <li><a href="">ASSIGNMENT 1</a></li>
+      <li><a href="">ASSIGNMENT 2</a></li>
       <!-- <li><a href="intro.html">GROUP NUM  &rarr;</a></li> -->
   </ul>
   </nav>  
@@ -52,7 +51,7 @@
   </nav>
   <nav>
     <ul class="nav-ul">
-        <li><a href="">Click here for More Information &rarr;</a></li>
+        <li><a href="{{url_for('intro')}}">Click here for More Information &rarr;</a></li>
     </ul>
   </nav>
 
