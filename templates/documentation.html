@@ -124,6 +124,34 @@
         <img class="center-image" src="{{ url_for('static', filename='Images/JarvisMarch.png') }}" alt="Jarvis March Algorithm"  width="600" height="auto" />
         <br> -->
           
+        <h3 style="color: rgb(247, 247, 141);">1. jarvis_march(points):</h3>
+
+
+        <p><strong style="color: rgb(132, 221, 251);">Input:</strong></p>
+
+       <ul>
+       <li>points: A list of tuples representing 2D points. Each tuple should contain the x and y coordinates of a point.</li>
+       </ul>
+
+       <p><strong style="color: rgb(132, 221, 251);">Output:</strong></p>
+
+       <ul>
+       <li>hull: A list of tuples representing the vertices of the convex hull. The vertices are ordered in a counterclockwise manner.</li>
+       </ul>
+
+       <p><strong style="color: rgb(132, 221, 251);">Mechanism of the function:</strong></p>
+
+
+   <ul>
+       <li>The <b>jarvis_march</b> function begins by initializing variables and selecting the starting point with the minimum x-coordinate (and minimum y-coordinate if there's a tie).</li>
+       <li>It then enters a loop where it iterates through all points to find the next point that forms a counterclockwise turn with the current point, using the <b>checkCounterClockWise</b> function and considering distances using the <b>distance</b> function.</li>
+       <li>This loop continues until it returns to the starting point, completing the convex hull.</li>
+       <li>Specifically, it calls <b>checkCounterClockWise</b> to determine the orientation of points and <b>distance</b> to calculate distances between points.</li>
+       <li>These functions help in identifying the next point to add to the convex hull.</li>
+   </ul>
+   <!-- <br>
+   <img class="center-image" src="{{ url_for('static', filename='Images/JarvisMarch.png') }}" alt="Jarvis March Algorithm"  width="600" height="auto" />
+   <br> -->
     
 
         

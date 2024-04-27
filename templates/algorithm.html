@@ -45,13 +45,23 @@
       <!-- <li><a href="intro.html">GROUP NUM  &rarr;</a></li> -->
   </ul>
   
-  <h1>ALGORTIHM</h1>
-  <p>1. OPT(i,j) is the maximum number of base pairs in a secondary structure for b_ib_(i+1)...b_j</p>
-  <p>2. OPT(i,j) = 0 if i>= j-4.</p>
-  <p>3. In the optimal secondary structure on b_ib_(i+1)...b_j, 
-        <p>-> If j is not a member of any pair, use OPT(i,j-1).</p>
-        <p>-> If j pairs with some t < j-4, knot condition yields two independent subproblems: OPT(i,t-1) and OPT(t+1,j-1).</p>
-  </p>
+  <h1>ALGORITHM</h1>
+
+<p>1. \( \text{OPT}(i,j) \) is the maximum number of base pairs in a secondary structure for \( b_i b_{(i+1)} \dots b_j \).</p>
+<p>2. \( \text{OPT}(i,j) = 0 \) if \( i \geq j-4 \).</p>
+<p>3. In the optimal secondary structure on \( b_i b_{(i+1)} \dots b_j \),
+  
+    <li>If \( j \) is not a member of any pair, use \( \text{OPT}(i,j-1) \).</li>
+    <li>If \( j \) pairs with some \( t < j-4 \), knot condition yields two independent subproblems:
+      
+        \( \text{OPT}(i,t-1) \) and 
+        \( \text{OPT}(t+1,j-1) \)
+      
+    </li>
+  </ul>
+
+
+
 
   <h3>RECURRENCE RELATION</h3>
   <html lang="en">
@@ -63,17 +73,17 @@
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
-    <div class="introduction">
-        \[
-        OPT(i,j) = max 
-        \begin{cases}
-            OPT(i,j - 1) & \text{if j is not a member of any pair. }  \\
-            \max\limits_{t}(1 + OPT(i,t - 1) + OPT(t + 1, j - 1)) & \text{if j pairs with some t < j - 4}
+  <div class="introduction">
+    \[
+    OPT(i,j) = \max
+    \begin{cases}
+        OPT(i,j - 1) & \text{if } j \text{ is not a member of any pair} \\
+        \max\limits_{t}(1 + OPT(i,t - 1) + OPT(t + 1, j - 1)) & \text{if } j \text{ pairs with some } t < j - 4
+    \end{cases}
+    \]
+</div>
+<p>\( t \) ranges from \( i \) to \( j - 5 \), such that it is allowed to pair with \( j \)</p>
 
-        \end{cases}
-        \]
-    </div>
-    <p>t ranges from i to j - 5, such that it is allowed to pair with j.</p>
 </body>
 </html>
 
