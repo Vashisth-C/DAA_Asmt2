@@ -1,5 +1,6 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 from flask_cors import CORS
+import subprocess
 
 app = Flask(__name__)
 CORS(app, resources={r"/api/*": {"origins": "*"}})
@@ -27,6 +28,30 @@ def documentation():
 @app.route('/intro')
 def intro():
     return render_template('intro.html')
+
+@app.route('/demo')
+def demo():
+    return render_template('demonstrate.html')
+
+@app.route('/run_cpp', methods=['POST'])
+def run_cpp_code():
+    cpp_executable_path = './a.out'
+    subprocess.Popen([cpp_executable_path])
+    return render_template('demonstrate.html')
+
+@app.route('/submit', methods=['POST'])
+def submit():
+    content = request.form['content']
+    # Write content to a file in the static folder
+    with open('static/data/input.txt', 'w') as f:
+        f.write(content)
+    return render_template('demonstrate.html')
+
+@app.route('/get_output')
+def get_output():
+    with open('static/data/output.txt', 'r') as file:
+        output_content = file.read()
+    return output_content
 
 if __name__ == '__main__':
     app.run(debug=True)
