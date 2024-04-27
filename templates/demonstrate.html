@@ -28,8 +28,17 @@
                     }
                 });
             });
+            $("#showImageButton").click(function(){
+                $("#svgImage").attr("src", "{{ url_for('static', filename='Images/rna.svg') }}?" + new Date().getTime());
+                $("#svgImage").show();
+            });
         });
     </script>
+    <style>
+      #svgImage {
+          display: none; /* Initially hide the image */
+      }
+  </style>
   </head>
   <style>
     .member {
@@ -119,7 +128,9 @@
     <br><br>
     <textarea id="outputTextArea" rows="10" cols="50"></textarea>
     
-    <img src="{{ url_for('static', filename='Images/rna.svg') }}" alt="SVG Image">
+    <button id="showImageButton">Show Image</button>
+    <br><br>
+    <img id="svgImage" src="{{ url_for('static', filename='Images/rna.svg') }}" alt="SVG Image">
     <div class="footer">
       We, the students of BITS Pilani Hyderabad Campus, have created this
       webpage, as a part of the Assignment-1 of the course CS F364 - Design and
