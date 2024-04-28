@@ -34,27 +34,70 @@
   </style>
 
   <rect style="stroke: white; fill: white" height="452" x="0" y="0" width="452" onclick="click(evt)" />
-  <g transform="scale(0.708700,0.708700) translate(223.421631,239.555038)">
+  <g transform="scale(2.706286,2.706286) translate(-20.160690,36.264843)">
     <polyline class="backbone" id="outline" points="
-      90.201,71.943
-      76.868,81.491
-      78.740,97.783
-      93.891,104.059
-      106.735,93.862
-      104.059,77.683
-      109.799,63.825
+      86.521,-28.765
+      92.567,-12.926
+      89.121,-4.497
+      93.582,3.855
+      95.390,18.746
+      97.198,33.636
+      99.006,48.527
+      100.814,63.418
+      100.814,78.418
+      99.006,93.308
+      88.727,106.086
+      94.906,121.277
+      111.185,123.254
+      120.819,109.983
+      113.897,95.116
+      115.705,80.226
+      119.877,76.003
+      120.487,68.769
+      115.705,61.609
+      113.897,46.719
+      112.089,31.828
+      110.281,16.938
+      108.473,2.047
+      107.567,-12.926
+      113.613,-28.765
     " />
     <g id="pairs">
-      <line class="basepairs" id="1,6" x1="90.20078" y1="71.94286" x2="104.05897" y2="77.68312" />
+      <line class="basepairs" id="2,24" x1="92.56712" y1="-12.92570" x2="107.56712" y2="-12.92570" />
+      <line class="basepairs" id="4,23" x1="93.58217" y1="3.85498" x2="108.47280" y2="2.04693" />
+      <line class="basepairs" id="5,22" x1="95.39021" y1="18.74561" x2="110.28085" y2="16.93756" />
+      <line class="basepairs" id="6,21" x1="97.19827" y1="33.63625" x2="112.08890" y2="31.82820" />
+      <line class="basepairs" id="7,20" x1="99.00632" y1="48.52688" x2="113.89695" y2="46.71883" />
+      <line class="basepairs" id="8,19" x1="100.81437" y1="63.41751" x2="115.70500" y2="61.60946" />
+      <line class="basepairs" id="9,16" x1="100.81437" y1="78.41751" x2="115.70500" y2="80.22556" />
+      <line class="basepairs" id="10,15" x1="99.00632" y1="93.30814" x2="113.89695" y2="95.11620" />
     </g>
     <g transform="translate(-4.6, 4)" id="seq">
-      <text class="nucleotide" x="90.201" y="71.943">A</text>
-      <text class="nucleotide" x="76.868" y="81.491">C</text>
-      <text class="nucleotide" x="78.740" y="97.783">U</text>
-      <text class="nucleotide" x="93.891" y="104.059">G</text>
-      <text class="nucleotide" x="106.735" y="93.862">U</text>
-      <text class="nucleotide" x="104.059" y="77.683">U</text>
-      <text class="nucleotide" x="109.799" y="63.825">A</text>
+      <text class="nucleotide" x="86.521" y="-28.765">A</text>
+      <text class="nucleotide" x="92.567" y="-12.926">C</text>
+      <text class="nucleotide" x="89.121" y="-4.497">G</text>
+      <text class="nucleotide" x="93.582" y="3.855">U</text>
+      <text class="nucleotide" x="95.390" y="18.746">A</text>
+      <text class="nucleotide" x="97.198" y="33.636">G</text>
+      <text class="nucleotide" x="99.006" y="48.527">C</text>
+      <text class="nucleotide" x="100.814" y="63.418">U</text>
+      <text class="nucleotide" x="100.814" y="78.418">G</text>
+      <text class="nucleotide" x="99.006" y="93.308">A</text>
+      <text class="nucleotide" x="88.727" y="106.086">C</text>
+      <text class="nucleotide" x="94.906" y="121.277">U</text>
+      <text class="nucleotide" x="111.185" y="123.254">G</text>
+      <text class="nucleotide" x="120.819" y="109.983">A</text>
+      <text class="nucleotide" x="113.897" y="95.116">U</text>
+      <text class="nucleotide" x="115.705" y="80.226">C</text>
+      <text class="nucleotide" x="119.877" y="76.003">G</text>
+      <text class="nucleotide" x="120.487" y="68.769">U</text>
+      <text class="nucleotide" x="115.705" y="61.609">A</text>
+      <text class="nucleotide" x="113.897" y="46.719">G</text>
+      <text class="nucleotide" x="112.089" y="31.828">C</text>
+      <text class="nucleotide" x="110.281" y="16.938">U</text>
+      <text class="nucleotide" x="108.473" y="2.047">A</text>
+      <text class="nucleotide" x="107.567" y="-12.926">G</text>
+      <text class="nucleotide" x="113.613" y="-28.765">C</text>
     </g>
   </g>
 </svg>
