@@ -75,59 +75,91 @@
 
   <body>
     <div class="navbar">
-        <img src="{{ url_for('static', filename='Images/logo.png') }}" alt="logo" /> 
-        <div class="home">
-          <ul> 
-            <li><a  href="{{url_for('demonstrate')}}">   Demonstrate </a></li>
-            <li><a  href="{{url_for('documentation')}}">   Documentation </a></li>
-            <li><a  href="{{url_for('index')}}">   Home </a></li>
-          </ul>
-    
-        </div>
-        
+      <img
+        src="{{ url_for('static', filename='Images/logo.png') }}"
+        alt="logo"
+      />
+      <div class="home">
         <ul>
-          <li><a href="{{url_for('about_us')}}">About Us </a></li>
-          <li><a href="{{url_for('comparitive_analysis')}}">Comparitive Analysis </a></li>
-          <li><a href="{{url_for('comp_analysis')}}">Complexity Analysis </a></li>
-          <!-- <li><a  href="">   Code Visualization</a></li> -->
-          
-          <li><a  href="{{url_for('algowriteup')}}">  Algorithm </a></li>
-          <li><a  href="{{url_for('intro')}}">   Info </a></li> 
+          <li><a href="{{url_for('demonstrate')}}"> Demonstrate </a></li>
+          <li><a href="{{url_for('documentation')}}"> Documentation </a></li>
+          <li><a href="{{url_for('index')}}"> Home </a></li>
         </ul>
+      </div>
+
+      <ul>
+        <li><a href="{{url_for('about_us')}}">About Us </a></li>
+        <li>
+          <a href="{{url_for('comparitive_analysis')}}"
+            >Comparitive Analysis
+          </a>
+        </li>
+        <li><a href="{{url_for('comp_analysis')}}">Complexity Analysis </a></li>
+        <!-- <li><a  href="">   Code Visualization</a></li> -->
+
+        <li><a href="{{url_for('algowriteup')}}"> Algorithm </a></li>
+        <li><a href="{{url_for('intro')}}"> Info </a></li>
+      </ul>
     </div>
 
     <h2 id="introduction">RUNNING TIME ANALYSIS</h2>
     <div class="introduction" style="text-align: justify">
       <h3>Time Complexity:</h3>
-      <p>The time complexity of the the dynamic programming (DP) approach for RNA secondary structure prediction is O(n^3), where n is the size of the input RNA sequence. 
+      <p>
+        The time complexity of the the dynamic programming (DP) approach for RNA
+        secondary structure prediction is <b>O(n<sup>3</sup>)</b>, where n is
+        the size of the input RNA sequence.
+      </p>
       <h3>Explanation:</h3>
-      <p>The algorithm uses a bottom-up dynamic programming approach to find the optimal secondary structure of the RNA sequence. It fills in a 2D matrix OPT with the optimal scores for each subsequence of the RNA sequence and a traceback matrix with the optimal split points for each subsequence. The algorithm then reconstructs the secondary structure using the traceback matrix.</p>
-      
-      <p>The time complexity of the algorithm can be broken down into the following steps:</p>
-      
-      <ul>
-        <li>Input Reading: O(n)</li>
-        <li>Dynamic Programming (DP) Initialization: O(n^2)
-          <br>
-          The code initializes a 2D vector OPT of size n x n and a 2D vector traceback of size n x n, where n is the size of the RNA sequence. Initializing these matrices takes O(n^2) time.
-        </li>
-        <li>Dynamic Programming (DP) Filling: O(n^3)
-          <br>
-          The nested loops iterate over each possible subsequence of the RNA sequence, filling in the entries of the OPT and traceback matrices. The outer loop runs from k=4 to n-1, and the inner loop runs from i=0 to n-k. Inside the nested loops, there's another loop iterating over possible split points. The complexity of this part is O(n^3).
-        </li>
-        <li>Secondary Structure Reconstruction: O(n^2)
-          <br>
-          After filling the DP matrices, the code reconstructs the secondary structure using a stack-based approach. This involves iterating over the traceback matrix and determining the secondary structure pairs. The complexity of this part is also O(n^2).
-        </li>
-        <li>Output Writing: O(n)</li>
-      </ul>
-      
-      <p>Therefore, the overall time complexity of the algorithm is O(n^3).</p>
-      </div>
-      
+      <p>
+        The algorithm uses a bottom-up dynamic programming approach to find the
+        optimal secondary structure of the RNA sequence. It fills in a 2D matrix
+        OPT with the optimal scores for each subsequence of the RNA sequence and
+        a traceback matrix with the optimal split points for each subsequence.
+        The algorithm then reconstructs the secondary structure using the
+        traceback matrix.
+      </p>
 
-      
-    
+      <p>
+        The time complexity of the algorithm can be broken down into the
+        following steps:
+      </p>
+
+      <ul>
+        <li>Input Reading: <b>O(n)</b></li>
+        <li>
+          Dynamic Programming (DP) Initialization: <b>O(n<sup>2</sup>)</b>
+          <br />
+          The code initializes a 2D vector OPT of size n x n and a 2D vector
+          traceback of size n x n, where n is the size of the RNA sequence.
+          Initializing these matrices takes <b>O(n<sup>2</sup>)</b> time.
+        </li>
+        <li>
+          Dynamic Programming (DP) Filling: <b>O(n<sup>3</sup>)</b>
+          <br />
+          The nested loops iterate over each possible subsequence of the RNA
+          sequence, filling in the entries of the OPT and traceback matrices.
+          The outer loop runs from k=4 to n-1, and the inner loop runs from
+          <b>i=0 to n-k.</b> Inside the nested loops, there's another loop
+          iterating over possible split points. The complexity of this part is
+          <b>O(n<sup>2</sup>)</b>.
+        </li>
+        <li>
+          Secondary Structure Reconstruction: <b>O(n<sup>2</sup>)</b>
+          <br />
+          After filling the DP matrices, the code reconstructs the secondary
+          structure using a stack-based approach. This involves iterating over
+          the traceback matrix and determining the secondary structure pairs.
+          The complexity of this part is also <b>O(n<sup>2</sup>)</b>.
+        </li>
+        <li>Output Writing: <b>O(n)</b></li>
+      </ul>
+
+      <p>
+        Therefore, the overall time complexity of the algorithm is
+        <b>O(n<sup>3</sup>)</b>.
+      </p>
+    </div>
 
     <div class="footer">
       We, the students of BITS Pilani Hyderabad Campus, have created this
