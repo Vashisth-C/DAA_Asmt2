@@ -21,6 +21,11 @@ def info():
 def comp_analysis():
     return render_template('comp_analysis.html')
 
+@app.route('/comparitive_analysis')
+def comparitive_analysis():
+    return render_template('comparitive_analysis.html')
+
+
 @app.route('/documentation')
 def documentation():
     return render_template('documentation.html')
