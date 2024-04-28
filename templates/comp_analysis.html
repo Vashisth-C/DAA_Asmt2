@@ -119,7 +119,12 @@
         The algorithm then reconstructs the secondary structure using the
         traceback matrix.
       </p>
-
+      <div style="display: flex; justify-content: space-between;">
+        <img class="center-image" src="{{ url_for('static', filename='Images/comp1.png') }}" alt="Complexity" width="47%" height="auto" 
+        style="margin-bottom: 3%"/>
+      <img class="center-image" src="{{ url_for('static', filename='Images/comp2.png') }}" alt="Complexity" width="47%" height="auto" 
+        style="margin-bottom: 3%"/>
+      </div>
       <p>
         The time complexity of the algorithm can be broken down into the
         following steps:
@@ -153,14 +158,7 @@
           The complexity of this part is also <b>O(n<sup>2</sup>)</b>.
         </li>
         <li>Output Writing: <b>O(n)</b></li>
-      </ul>
-      <div style="display: flex; justify-content: space-between;">
-        <img class="center-image" src="{{ url_for('static', filename='Images/comp1.png') }}" alt="Complexity" width="47%" height="auto" 
-        style="margin-bottom: 3%"/>
-      <img class="center-image" src="{{ url_for('static', filename='Images/comp2.png') }}" alt="Complexity" width="47%" height="auto" 
-        style="margin-bottom: 3%"/>
-      </div>
-      
+      </ul> 
       <p>
         Therefore, the overall time complexity of the algorithm is
         <b>O(n<sup>3</sup>)</b>.

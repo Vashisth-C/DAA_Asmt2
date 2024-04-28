@@ -63,9 +63,9 @@
    <p>1. \( \text{OPT}(i,j) \) is the maximum number of base pairs in a secondary structure for \( b_i b_{(i+1)} \dots b_j \).</p>
    <p>2. \( \text{OPT}(i,j) = 0 \) if \( i \geq j-4 \).</p>
    <p>3. In the optimal secondary structure on \( b_i b_{(i+1)} \dots b_j \),
-      <li>(i) If \( j \) is not a member of any pair, use \( \text{OPT}(i,j-1) \).</li>
+      <li>If \( j \) is not a member of any pair, use \( \text{OPT}(i,j-1) \).</li>
       <br>
-      <li>(ii) If \( j \) pairs with some \( t &lt; j-4 \), the knot condition yields two independent subproblems: \( \text{OPT}(i,t-1) \) and \( \text{OPT}(t+1,j-1) \).</li>
+      <li>If \( j \) pairs with some \( t &lt; j-4 \), the knot condition yields two independent subproblems: \( \text{OPT}(i,t-1) \) and \( \text{OPT}(t+1,j-1) \).</li>
       <br>
       
    </p>
@@ -102,7 +102,15 @@
         <img class="center-image" src="{{ url_for('static', filename='Images/algo.jpeg') }}" alt="Jarvis March Algorithm"  width="600" height="auto" />
   <br>
 </ul>
-  
+ 
+<p style="margin-top: 7%;margin-bottom: 3%;">
+  <h3>References:</h3>
+    <ol>
+      <li>Algorithm Design by Eva Tardos and Jon Kleinberg.</li>
+      <li><a href="https://rnacentral.org/" style="font-family: Arial, sans-serif;color: white;text-decoration: none;">https://rnacentral.org/</a></li>
+    </ol>
+</p>
+
 <div class="footer">
   We, the students of BITS Pilani Hyderabad Campus, have created this webpage, as a part of the Assignment-2 of the course
 CS F364 - Design and Analysis of Algorithms (DAA).
