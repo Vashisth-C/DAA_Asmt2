@@ -6,10 +6,10 @@
 #include<string>
 using namespace std;
 
-int solve(string rna, vector<vector<int>>& traceback) 
+int solve(string rna, vector<vector<int>>& dp) 
 {
     int n = rna.size();
-    vector<vector<int> > OPT(n, vector<int>(n, 0));
+    vector<vector<int>> OPT(n, vector<int>(n, 0));
 
     for (int k=4; k<n; k++) 
     {
@@ -36,16 +36,16 @@ int solve(string rna, vector<vector<int>>& traceback)
                 }
             }
             OPT[i][j] = max;
-            traceback[i][j] = splitPoint;
+            dp[i][j] = splitPoint;
         }
     }
     return OPT[0][n - 1];
 }
 
-pair<vector<pair<int, int>>, string> tracebackSecondaryStructure(string rna, vector<vector<int>> traceback) {
+pair<vector<pair<pair<int, int>, pair<char, char>>>, string> generateStructure(string rna, vector<vector<int>> dp) {
     int n = rna.size();
     stack<pair<int, int>> segments;
-    vector <pair<int, int> > pairs;
+    vector<pair<pair<int, int>, pair<char, char>>> pairs;
     string structure(n, '.');
 
     segments.push(make_pair(0, n - 1));
@@ -57,7 +57,7 @@ pair<vector<pair<int, int>>, string> tracebackSecondaryStructure(string rna, vec
 
         if (i >= j) continue;
 
-        int splitPoint = traceback[i][j];
+        int splitPoint = dp[i][j];
 
         if (splitPoint == -1)
             segments.push(make_pair(i, j-1));
@@ -65,7 +65,7 @@ pair<vector<pair<int, int>>, string> tracebackSecondaryStructure(string rna, vec
         {
             structure[splitPoint] = '(';
             structure[j] = ')';
-            pairs.push_back(make_pair(splitPoint, j));
+            pairs.push_back(make_pair(make_pair(splitPoint, j),make_pair(rna[splitPoint],rna[j])));
             segments.push(make_pair(i, splitPoint-1));
             segments.push(make_pair(splitPoint+1, j-1));
         }
@@ -89,10 +89,10 @@ int main() {
     }
 
     int n = rna.size();
-    vector<vector<int>> traceback(n, vector<int>(n, -1));
+    vector<vector<int>> dp(n, vector<int>(n, -1));
 
-    int ans = solve(rna, traceback);
-    pair<vector<pair<int, int>>, string> folding = tracebackSecondaryStructure(rna, traceback);
+    int ans = solve(rna, dp);
+    pair<vector<pair<pair<int, int>, pair<char, char>>>, string> folding = generateStructure(rna, dp);
 
     ofstream foldingOutput("./static/data/folding.txt");
     if (!foldingOutput.is_open()) {
@@ -106,7 +106,7 @@ int main() {
     ofstream optimalPairs("./static/data/output.txt");
     optimalPairs <<"Optimal pairs: " << ans << endl;
     for(auto x: folding.first){
-        optimalPairs << x.first<<" "<<x.second<<endl;
+        optimalPairs <<"(" <<x.first.first<<" "<<x.first.second << ")"<< ", " << "(" <<x.second.first<<" "<<x.second.second << ")"<<endl;
     }
     optimalPairs.close();
 
