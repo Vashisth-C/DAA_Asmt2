@@ -66,8 +66,8 @@
     margin-right: auto; /* Push to the left end */
     }
 
-    .button-center {
-    margin: auto; /* Center the button horizontally */
+    .button-right {
+    margin-left: auto; /* Center the button horizontally */
     }
 </style>
 
@@ -87,8 +87,9 @@
       <li><a href="{{url_for('about_us')}}">About Us </a></li>
       <li><a href="{{url_for('comp_analysis')}}">Complexity Analysis </a></li>
       <!-- <li><a  href="">   Code Visualization</a></li> -->
+      
+      <li><a  href="{{url_for('algowriteup')}}">  Algorithm </a></li>
       <li><a  href="{{url_for('intro')}}">   Info </a></li>
-      <li><a  href="{{url_for('algowriteup')}}">  DP Algorithm </a></li>
     </ul>
 </div>
 
@@ -105,8 +106,8 @@
 
   <nav>
     <ul class="button-container">
-      <li class="button-left"><a href="{{url_for('algowriteup')}}">&larr;  More about Problem Statement </a></li>
-      <li class="button-center"><a href="{{url_for('algorithm')}}"> DP Algorithm</a></li>
+      <li class="button-left"><a href="{{url_for('algowriteup')}}">  More about Problem Statement </a></li>
+      <li class="button-right"><a href="{{url_for('algorithm')}}"> DP Algorithm</a></li>
       <li></li>
      
     </ul>

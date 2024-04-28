@@ -30,21 +30,22 @@
           <li><a href="{{url_for('about_us')}}">About Us </a></li>
           <li><a href="{{url_for('comp_analysis')}}">Complexity Analysis </a></li>
           <!-- <li><a  href="">   Code Visualization</a></li> -->
+          
+          <li><a  href="{{url_for('algowriteup')}}">  Algorithm </a></li>
           <li><a  href="{{url_for('intro')}}">   Info </a></li>
-          <li><a  href="{{url_for('algowriteup')}}">  DP Algorithm </a></li>
         </ul>
   </div>
  
   <nav>
-    <ul class="nav-ul">
+    <!-- <ul class="nav-ul">
         <li><a href="">CS F364: DESIGN AND ANALYSIS OF ALGORITHMS</a></li>
-        <!-- <li><a href="intro.html">GROUP NUM  &rarr;</a></li> -->
+        <li><a href="intro.html">GROUP NUM  &rarr;</a></li>
     </ul>
     <ul class="nav-ul">
       <li><a href="">ASSIGNMENT 2</a></li>
-      <!-- <li><a href="intro.html">GROUP NUM  &rarr;</a></li> -->
+      <li><a href="intro.html">GROUP NUM  &rarr;</a></li>
   </ul>
-  
+   -->
   <h1>ALGORITHM</h1>
 
 <p>1. \( \text{OPT}(i,j) \) is the maximum number of base pairs in a secondary structure for \( b_i b_{(i+1)} \dots b_j \).</p>
@@ -86,9 +87,12 @@
 
 </body>
 </html>
-
-  
-
+<br>
+<ul>
+  <br>
+        <img class="center-image" src="{{ url_for('static', filename='Images/algo.jpeg') }}" alt="Jarvis March Algorithm"  width="600" height="auto" />
+  <br>
+</ul>
   
 <div class="footer">
   We, the students of BITS Pilani Hyderabad Campus, have created this webpage, as a part of the Assignment-1 of the course

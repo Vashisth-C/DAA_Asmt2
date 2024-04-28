@@ -1,50 +1,31 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>DAA ASSIGNMENT</title>
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="{{ url_for('static', filename='CSS/style.css') }}"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="{{ url_for('static', filename='CSS/navigation.css') }}"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      href="{{ url_for('static', filename='Images/logo.png') }}"
-    />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script>
-      $(document).ready(function () {
-        $("#showOutput").click(function () {
-          $.ajax({
-            url: "/get_output",
-            success: function (result) {
-              $("#outputTextArea").val(result);
-            },
-          });
-        });
-        $("#showImageButton").click(function () {
-          $("#svgImage").attr(
-            "src",
-            "{{ url_for('static', filename='Images/rna.svg') }}?" +
-              new Date().getTime()
-          );
-          $("#svgImage").show();
+<head>
+  <title>DAA ASSIGNMENT</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='CSS/style.css') }}" />
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='CSS/navigation.css') }}" />
+  <link rel="icon" type="image/png" href="{{ url_for('static', filename='Images/logo.png') }}" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $("#showOutput").click(function () {
+        $.ajax({
+          url: "/get_output",
+          success: function (result) {
+            $("#outputTextArea").val(result);
+          },
         });
       });
-    </script>
-    <style>
-      #svgImage {
-        display: none; /* Initially hide the image */
-      }
-    </style>
-  </head>
+      $("#showImageButton").click(function () {
+        $("#svgImage").attr("src", "{{ url_for('static', filename='Images/rna.svg') }}?" + new Date().getTime());
+        $("#svgImage").show();
+      });
+    });
+  </script>
   <style>
+    #svgImage {
+      display: none; /* Initially hide the image */
+    }
     .member {
       display: flex;
       background-color: black;
@@ -130,8 +111,9 @@
         <li><a href="{{url_for('about_us')}}">About Us </a></li>
         <li><a href="{{url_for('comp_analysis')}}">Complexity Analysis </a></li>
         <!-- <li><a  href="">   Code Visualization</a></li> -->
+        
+        <li><a  href="{{url_for('algowriteup')}}">  Algorithm </a></li>
         <li><a  href="{{url_for('intro')}}">   Info </a></li>
-        <li><a  href="{{url_for('algowriteup')}}">  DP Algorithm </a></li>
       </ul>
     </div>
     <div class="container">
