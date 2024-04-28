@@ -46,7 +46,7 @@ def submit():
         f.write(content)
 
     content_length = len(str(len(content)))
-    base_pause_duration = 0.5
+    base_pause_duration = 0.75
     pause_duration = base_pause_duration * content_length
 
     cpp_executable_path = './a.out'
