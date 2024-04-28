@@ -1,0 +1,212 @@
+<svg
+	xmlns="http://www.w3.org/2000/svg"
+	width="330.9"
+	height="387.98"
+	style="font-size: 8.334300px; font-weight: bold; font-family: Helvetica; " >
+<g><style type="text/css" >
+<!-- create color definitions -->
+<![CDATA[
+text.red {fill: rgb(255, 0, 255); }
+text.green {fill: rgb(0, 255, 0); }
+text.blue {fill: rgb(0, 0, 255); }
+text.black {fill: rgb(0, 0, 0); }
+text.gray {fill: rgb(204, 204, 204); }
+text.brown {fill: rgb(211.65, 104.55, 30.6); }
+text {fill: rgb(0, 0, 0); text-anchor: middle; alignment-baseline: middle; }
+circle.red {stroke: rgb(255, 0, 255); fill: none; }
+circle.green {stroke: rgb(0, 255, 0); fill: none; }
+circle.blue {stroke: rgb(0, 0, 255); fill: none; }
+circle.black {stroke: rgb(0, 0, 0); fill: none; }
+circle.gray {stroke: rgb(204, 204, 204); fill: none; }
+circle.brown {stroke: rgb(211.65, 104.55, 30.6); fill: none; }
+circle {stroke: rgb(0, 0, 0); }
+line.red {stroke: rgb(255, 0, 255); stroke-width: 1.041788; }
+line.green {stroke: rgb(0, 255, 0); stroke-width: 1.041788; }
+line.blue {stroke: rgb(0, 0, 255); stroke-width: 1.041788; }
+line.black {stroke: rgb(0, 0, 0); stroke-width: 1.041788; }
+line.gray {stroke: rgb(204, 204, 204); stroke-width: 1.041788; }
+line.brown {stroke: rgb(211.65, 104.55, 30.6); stroke-width: 1.041788; }
+line {stroke: rgb(0, 0, 0); }
+text.numbering-label {fill: rgb(204, 204, 204);}
+line.numbering-line {stroke: rgb(204, 204, 204); stroke-width: 0.520894;}
+line.predicted {stroke: rgb(0, 0, 0); stroke-dasharray: 2}
+text.background {fill: rgb(255, 255, 255);
+.template {visibility:hidden}
+]]>
+</style></g>
+<g><title>0 (position.label in template: 0.5')</title><text x="91" y="42" class="green" >5'</text></g>
+<g><title>1 (position.label in template: 1.A)</title><text x="91" y="50" class="black" >A</text></g>
+<g><title>2 (position.label in template: 2.A)</title><text x="91" y="58" class="black" >A</text></g>
+<g><title>3 (position.label in template: 3.U)</title><text x="91" y="66.0001" class="black" >U</text></g>
+<g><line x1="85.4438" y1="65.1666" x2="76.5562" y2="65.1666" class="black" /></g>
+<g><title>4 (position.label in template: 4.C)</title><text x="91" y="74.0001" class="black" >C</text></g>
+<g><line x1="85.4438" y1="73.1666" x2="76.5562" y2="73.1666" class="black" /></g>
+<g><title>5 (position.label in template: 5.C)</title><text x="91" y="82.0001" class="black" >C</text></g>
+<g><line x1="85.4438" y1="81.1666" x2="76.5562" y2="81.1666" class="black" /></g>
+<g><title>6 (position.label in template: 6.C)</title><text x="91" y="90.0001" class="black" >C</text></g>
+<g><line x1="85.4438" y1="89.1666" x2="76.5562" y2="89.1666" class="black" /></g>
+<g><title>7 (position.label in template: 7.C)</title><text x="91" y="98.0001" class="black" >C</text></g>
+<g><line x1="85.4438" y1="97.1666" x2="76.5562" y2="97.1666" class="black" /></g>
+<g><title>8 (position.label in template: 8.C)</title><text x="91" y="106" class="black" >C</text></g>
+<g><line x1="85.4438" y1="105.167" x2="76.5562" y2="105.167" class="black" /></g>
+<g><title>9 (position.label in template: 9.G)</title><text x="91" y="114" class="black" >G</text></g>
+<g><line x1="85.4438" y1="113.167" x2="76.5562" y2="113.167" class="black" /></g>
+<g><title>10 (position.label in template: 10.U)</title><text x="91" y="122" class="black" >U</text></g>
+<g><line x1="85.4438" y1="121.167" x2="76.5562" y2="121.167" class="black" /></g>
+<g><title>10 (inserted)</title><text x="109.752" y="122" class="numbering-label sequential" >10</text></g>
+<g><line x1="96.0006" y1="122" x2="104.752" y2="122" class="numbering-line sequential" /></g>
+<g><title>11 (position.label in template: 11.G)</title><text x="91" y="130" class="black" >G</text></g>
+<g><line x1="85.4438" y1="129.167" x2="76.5562" y2="129.167" class="black" /></g>
+<g><title>12 (position.label in template: 12.C)</title><text x="91" y="138" class="black" >C</text></g>
+<g><line x1="85.4438" y1="137.167" x2="76.5562" y2="137.167" class="black" /></g>
+<g><title>13 (position.label in template: 13.C)</title><text x="97.5" y="140.85" class="black" >C</text></g>
+<g><title>14 (position.label in template: 14.C)</title><text x="102.89" y="145.23" class="black" >C</text></g>
+<g><title>15 (position.label in template: 15.U)</title><text x="106.92" y="150.9" class="green" >A</text></g>
+<g><title>16 (position.label in template: 16.U)</title><text x="109.28" y="157.44" class="black" >U</text></g>
+<g><title>17 (position.label in template: 17.A)</title><text x="109.81" y="164.37" class="black" >A</text></g>
+<g><title>18 (position.label in template: 18.G)</title><text x="108.5" y="171.2" class="black" >G</text></g>
+<g><line x1="108.5" y1="175.923" x2="108.5" y2="184.81" class="black" /></g>
+<g><title>19 (position.label in template: 19.C)</title><text x="116.5" y="171.2" class="black" >C</text></g>
+<g><line x1="116.5" y1="175.923" x2="116.5" y2="184.81" class="black" /></g>
+<g><title>20 (position.label in template: 20.G)</title><text x="124.5" y="171.2" class="black" >G</text></g>
+<g><line x1="124.5" y1="175.923" x2="124.5" y2="184.81" class="black" /></g>
+<g><title>20 (inserted)</title><text x="124.5" y="152.448" class="numbering-label sequential" >20</text></g>
+<g><line x1="124.5" y1="166.199" x2="124.5" y2="156.615" class="numbering-line sequential" /></g>
+<g><title>21 (position.label in template: 21.G)</title><text x="132.5" y="171.2" class="black" >G</text></g>
+<g><line x1="132.5" y1="175.923" x2="132.5" y2="184.81" class="black" /></g>
+<g><title>22 (position.label in template: 22.C)</title><text x="140.5" y="171.2" class="black" >C</text></g>
+<g><line x1="140.5" y1="175.923" x2="140.5" y2="184.81" class="black" /></g>
+<g><title>23 (position.label in template: 23.G)</title><text x="148.5" y="171.2" class="black" >G</text></g>
+<g><line x1="148.5" y1="175.923" x2="148.5" y2="184.81" class="black" /></g>
+<g><title>24 (position.label in template: 24.U)</title><text x="156.5" y="171.2" class="black" >U</text></g>
+<g><line x1="156.5" y1="175.923" x2="156.5" y2="184.81" class="black" /></g>
+<g><title>25 (position.label in template: 25.G)</title><text x="164.5" y="171.2" class="black" >G</text></g>
+<g><line x1="164.5" y1="175.923" x2="164.5" y2="184.81" class="black" /></g>
+<g><title>26 (position.label in template: 26.G)</title><text x="166.1" y="162.8" class="black" >G</text></g>
+<g><title>27 (position.label in template: 27.A)</title><text x="172.7" y="157.3" class="black" >A</text></g>
+<g><title>28 (position.label in template: 28.A)</title><text x="181.3" y="157.3" class="black" >A</text></g>
+<g><title>29 (position.label in template: 29.C)</title><text x="187.9" y="162.7" class="black" >C</text></g>
+<g><title>30 (position.label in template: 30.C)</title><text x="189.5" y="171.2" class="black" >C</text></g>
+<g><line x1="189.5" y1="175.923" x2="189.5" y2="184.81" class="black" /></g>
+<g><title>30 (inserted)</title><text x="201.931" y="157.16" class="numbering-label sequential" >30</text></g>
+<g><line x1="192.815" y1="167.456" x2="198.241" y2="161.327" class="numbering-line sequential" /></g>
+<g><title>31 (position.label in template: 31.A)</title><text x="197.5" y="171.2" class="black" >A</text></g>
+<g><line x1="197.5" y1="175.923" x2="197.5" y2="184.81" class="black" /></g>
+<g><title>32 (position.label in template: 32.C)</title><text x="205.5" y="171.2" class="black" >C</text></g>
+<g><line x1="205.5" y1="175.923" x2="205.5" y2="184.81" class="black" /></g>
+<g><title>33 (position.label in template: 33.C)</title><text x="214.5" y="171.2" class="black" >C</text></g>
+<g><line x1="214.5" y1="175.923" x2="214.5" y2="184.71" class="black" /></g>
+<g><title>34 (position.label in template: 34.C)</title><text x="222.5" y="171.2" class="black" >C</text></g>
+<g><line x1="222.5" y1="175.923" x2="222.5" y2="184.81" class="black" /></g>
+<g><title>35 (position.label in template: 35.G)</title><text x="230.5" y="171.2" class="black" >G</text></g>
+<g><line x1="230.5" y1="175.923" x2="230.5" y2="184.71" class="black" /></g>
+<g><title>36 (position.label in template: 36.U)</title><text x="238.5" y="171.2" class="black" >U</text></g>
+<g><line x1="238.5" y1="175.923" x2="238.5" y2="184.81" class="black" /></g>
+<g><title>37 (position.label in template: 37.U)</title><text x="243.7" y="164.5" class="black" >U</text></g>
+<g><title>38 (position.label in template: 38.C)</title><text x="251" y="160.2" class="black" >C</text></g>
+<g><title>39 (position.label in template: 39.C)</title><text x="259.5" y="158.9" class="black" >C</text></g>
+<g><title>40 (position.label in template: 40.C)</title><text x="267.8" y="160.9" class="black" >C</text></g>
+<g><title>41 (position.label in template: 41.A)</title><text x="274.7" y="165.7" class="black" >A</text></g>
+<g><title>42 (position.label in template: 42.U)</title><text x="279.3" y="173" class="black" >U</text></g>
+<g><title>43 (position.label in template: 43.U)</title><text x="280.9" y="181.3" class="black" >U</text></g>
+<g><title>44 (position.label in template: 44.C)</title><text x="279.3" y="189.7" class="black" >C</text></g>
+<g><title>45 (position.label in template: 45.C)</title><text x="274.6" y="196.7" class="black" >C</text></g>
+<g><title>46 (position.label in template: 46.G)</title><text x="267.7" y="201.7" class="black" >G</text></g>
+<g><title>47 (position.label in template: 47.A)</title><text x="259.4" y="203.6" class="black" >A</text></g>
+<g><title>48 (position.label in template: 48.A)</title><text x="251" y="202.3" class="black" >A</text></g>
+<g><title>49 (position.label in template: 49.C)</title><text x="243.6" y="197.9" class="black" >C</text></g>
+<g><title>50 (position.label in template: 50.A)</title><text x="238.5" y="191.2" class="black" >A</text></g>
+<g><title>50 (inserted)</title><text x="229.861" y="207.844" class="numbering-label sequential" >50</text></g>
+<g><line x1="236.196" y1="195.638" x2="232.024" y2="203.676" class="numbering-line sequential" /></g>
+<g><title>51 (position.label in template: 51.C)</title><text x="230.5" y="191.1" class="black" >C</text></g>
+<g><title>52 (position.label in template: 52.G)</title><text x="222.5" y="191.2" class="black" >G</text></g>
+<g><title>53 (position.label in template: 53.G)</title><text x="214.5" y="191.1" class="black" >G</text></g>
+<g><title>54 (position.label in template: 54.A)</title><text x="214" y="199.2" class="black" >A</text></g>
+<g><title>55 (position.label in template: 55.A)</title><text x="206" y="199.2" class="black" >A</text></g>
+<g><title>56 (position.label in template: 56.G)</title><text x="205.5" y="191.2" class="black" >G</text></g>
+<g><title>57 (position.label in template: 57.U)</title><text x="197.5" y="191.2" class="black" >U</text></g>
+<g><title>58 (position.label in template: 58.G)</title><text x="189.5" y="191.2" class="black" >G</text></g>
+<g><title>59 (position.label in template: 59.A)</title><text x="185" y="197.89" class="black" >A</text></g>
+<g><title>60 (position.label in template: 60.A)</title><text x="177.07" y="200.42" class="black" >A</text></g>
+<g><title>61 (position.label in template: 61.A)</title><text x="169.13" y="197.95" class="black" >A</text></g>
+<g><title>62 (position.label in template: 62.C)</title><text x="164.5" y="191.2" class="black" >C</text></g>
+<g><title>63 (position.label in template: 63.G)</title><text x="156.5" y="191.2" class="black" >G</text></g>
+<g><title>64 (position.label in template: 64.C)</title><text x="148.5" y="191.2" class="black" >C</text></g>
+<g><title>65 (position.label in template: 65.G)</title><text x="140.5" y="191.2" class="black" >G</text></g>
+<g><title>66 (position.label in template: 66.C)</title><text x="132.5" y="191.2" class="black" >C</text></g>
+<g><title>67 (position.label in template: 67.C)</title><text x="124.5" y="191.2" class="black" >C</text></g>
+<g><title>68 (position.label in template: 68.A)</title><text x="120.5" y="198.2" class="black" >A</text></g>
+<g><title>69 (position.label in template: 69.G)</title><text x="116.5" y="191.2" class="black" >G</text></g>
+<g><title>70 (position.label in template: 70.C)</title><text x="108.5" y="191.2" class="black" >C</text></g>
+<g><title>71 (position.label in template: 71.G)</title><text x="99.73" y="192.11" class="black" >G</text></g>
+<g><title>72 (position.label in template: 72.C)</title><text x="91" y="196.2" class="black" >C</text></g>
+<g><line x1="85.4438" y1="195.367" x2="76.5562" y2="195.367" class="black" /></g>
+<g><title>73 (position.label in template: 73.C)</title><text x="91" y="204.2" class="black" >C</text></g>
+<g><line x1="85.4438" y1="203.367" x2="76.5562" y2="203.367" class="black" /></g>
+<g><title>74 (position.label in template: 74.G)</title><text x="90.99" y="212.2" class="black" >G</text></g>
+<g><title>75 (position.label in template: 75.A)</title><text x="91" y="220.2" class="black" >A</text></g>
+<g><line x1="85.4438" y1="219.367" x2="76.5562" y2="219.367" class="black" /></g>
+<g><title>76 (position.label in template: 76.U)</title><text x="91" y="228.2" class="black" >U</text></g>
+<g><line x1="85.4438" y1="227.367" x2="76.5562" y2="227.367" class="black" /></g>
+<g><title>77 (position.label in template: 77.G)</title><text x="90.99" y="236.2" class="black" >G</text></g>
+<g><title>78 (position.label in template: 78.G)</title><text x="90.99" y="244.2" class="black" >G</text></g>
+<g><title>79 (position.label in template: 79.U)</title><text x="98.06" y="251.27" class="black" >U</text></g>
+<g><title>80 (position.label in template: 80.A)</title><text x="98.02" y="261.22" class="black" >A</text></g>
+<g><title>81 (position.label in template: 81.C)</title><text x="90.94" y="268.2" class="black" >C</text></g>
+<g><line x1="85.3838" y1="267.367" x2="76.5362" y2="267.367" class="black" /></g>
+<g><title>82 (position.label in template: 82.U)</title><text x="90.96" y="276.2" class="black" >U</text></g>
+<g><line x1="85.4038" y1="275.367" x2="76.5562" y2="275.367" class="black" /></g>
+<g><title>83 (position.label in template: 83.G)</title><text x="90.99" y="284.2" class="black" >G</text></g>
+<g><line x1="85.4338" y1="283.367" x2="76.5362" y2="283.367" class="black" /></g>
+<g><title>84 (position.label in template: 84.G)</title><text x="91.01" y="292.2" class="black" >G</text></g>
+<g><line x1="85.4538" y1="291.367" x2="76.5662" y2="291.367" class="black" /></g>
+<g><title>85 (position.label in template: 85.G)</title><text x="91.03" y="300.2" class="black" >G</text></g>
+<g><line x1="85.4738" y1="299.367" x2="76.5862" y2="299.367" class="black" /></g>
+<g><title>86 (position.label in template: 86.A)</title><text x="90.97" y="308.2" class="green" >C</text></g>
+<g><line x1="85.4138" y1="307.367" x2="76.5162" y2="307.367" class="black" /></g>
+<g><title>87 (position.label in template: 87.C)</title><text x="90.95" y="316.2" class="green" >G</text></g>
+<g><line x1="85.3938" y1="315.367" x2="76.5462" y2="315.367" class="black" /></g>
+<g><title>88 (position.label in template: 88.C)</title><text x="90.97" y="324.2" class="green" >G</text></g>
+<g><line x1="85.4138" y1="323.367" x2="76.5262" y2="323.367" class="black" /></g>
+<g><title>89 (position.label in template: 89.G)</title><text x="90.7" y="332.28" class="black" >G</text></g>
+<g><title>90 (position.label in template: 90.C)</title><text x="85.01" y="337.96" class="black" >C</text></g>
+<g><title>91 (position.label in template: 91.A)</title><text x="76.97" y="337.98" class="green" >G</text></g>
+<g><title>92 (position.label in template: 92.G)</title><text x="71.25" y="332.32" class="green" >A</text></g>
+<g><title>93 (position.label in template: 93.G)</title><text x="70.97" y="324.2" class="green" >C</text></g>
+<g><title>94 (position.label in template: 94.G)</title><text x="70.99" y="316.2" class="green" >C</text></g>
+<g><title>95 (position.label in template: 95.U)</title><text x="70.96" y="308.2" class="green" >G</text></g>
+<g><title>96 (position.label in template: 96.C)</title><text x="71.03" y="300.2" class="black" >C</text></g>
+<g><title>97 (position.label in template: 97.C)</title><text x="71.01" y="292.2" class="black" >C</text></g>
+<g><title>98 (position.label in template: 98.U)</title><text x="70.98" y="284.2" class="black" >U</text></g>
+<g><title>99 (position.label in template: 99.G)</title><text x="71" y="276.2" class="black" >G</text></g>
+<g><title>100 (position.label in template: 100.G)</title><text x="70.98" y="268.2" class="black" >G</text></g>
+<g><title>100 (inserted)</title><text x="53.4719" y="274.916" class="numbering-label sequential" >100</text></g>
+<g><line x1="66.3112" y1="269.991" x2="60.9727" y2="272.039" class="numbering-line sequential" /></g>
+<g><title>101 (position.label in template: 101.G)</title><text x="65.1" y="260.82" class="black" >G</text></g>
+<g><title>102 (position.label in template: 102.A)</title><text x="65.11" y="251.52" class="black" >A</text></g>
+<g><title>103 (position.label in template: 103.G)</title><text x="71.01" y="244.2" class="black" >G</text></g>
+<g><title>104 (position.label in template: 104.A)</title><text x="71.01" y="236.2" class="black" >A</text></g>
+<g><title>105 (position.label in template: 105.G)</title><text x="71" y="228.2" class="black" >G</text></g>
+<g><title>106 (position.label in template: 106.U)</title><text x="71" y="220.2" class="black" >U</text></g>
+<g><title>107 (position.label in template: 107.A)</title><text x="71.01" y="212.2" class="black" >A</text></g>
+<g><title>108 (position.label in template: 108.G)</title><text x="71" y="204.2" class="black" >G</text></g>
+<g><title>109 (position.label in template: 109.G)</title><text x="71" y="196.2" class="black" >G</text></g>
+<g><title>110 (position.label in template: 110.U)</title><text x="55.73" y="184.95" class="black" >U</text></g>
+<g><title>111 (position.label in template: 111.C)</title><text x="50" y="167.02" class="black" >C</text></g>
+<g><title>112 (position.label in template: 112.G)</title><text x="55.82" y="149.13" class="black" >G</text></g>
+<g><title>113 (position.label in template: 113.G)</title><text x="71" y="138" class="black" >G</text></g>
+<g><title>114 (position.label in template: 114.U)</title><text x="71" y="130" class="black" >U</text></g>
+<g><title>115 (position.label in template: 115.G)</title><text x="71" y="122" class="black" >G</text></g>
+<g><title>116 (position.label in template: 116.C)</title><text x="71" y="114" class="black" >C</text></g>
+<g><title>117 (position.label in template: 117.G)</title><text x="71" y="106" class="black" >G</text></g>
+<g><title>118 (position.label in template: 118.G)</title><text x="71" y="98.0001" class="black" >G</text></g>
+<g><title>119 (position.label in template: 119.G)</title><text x="71" y="90.0001" class="black" >G</text></g>
+<g><title>120 (position.label in template: 120.G)</title><text x="71" y="82.0001" class="black" >G</text></g>
+<g><title>121 (position.label in template: 121.G)</title><text x="71" y="74.0001" class="black" >G</text></g>
+<g><title>122 (position.label in template: 122.A)</title><text x="71" y="66.0001" class="black" >A</text></g>
+<g><title>123 (position.label in template: 124.3')</title><text x="63.5722" y="68.9712" class="green" >3'</text></g>
+<g><line x1="66.5267" y1="192.071" x2="60.2033" y2="187.412" class="gray" /></g>
+<g><line x1="54.0386" y1="178.824" x2="51.6914" y2="171.479" class="gray" /></g>
+<g><line x1="51.7189" y1="160.903" x2="54.1011" y2="153.58" class="gray" /></g>
+<g><line x1="60.3008" y1="145.011" x2="66.5192" y2="140.452" class="gray" /></g>
+</svg>
