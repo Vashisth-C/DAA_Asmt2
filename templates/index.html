@@ -19,9 +19,9 @@
     <img src="{{ url_for('static', filename='Images/logo.png') }}" alt="logo" /> 
     <div class="home">
       <ul> 
+        <li><a  href="{{url_for('demonstrate')}}">   Demonstrate </a></li>
         <li><a  href="{{url_for('documentation')}}">   Documentation </a></li>
         <li><a  href="{{url_for('index')}}">   Home </a></li>
-        
       </ul>
 
     </div>
@@ -30,9 +30,11 @@
       <li><a href="{{url_for('about_us')}}">About Us </a></li>
       <li><a href="{{url_for('comp_analysis')}}">Complexity Analysis </a></li>
       <!-- <li><a  href="">   Code Visualization</a></li> -->
+     
+      <li><a  href="{{url_for('algowriteup')}}">  Algorithm </a></li>
       <li><a  href="{{url_for('intro')}}">   Info </a></li>
     </ul>
-  </div>
+</div>
  
   <nav>
     <ul class="nav-ul">

@@ -65,23 +65,25 @@
 <body>
   <body>
     <div class="navbar">
-        <img src="{{ url_for('static', filename='Images/logo.png') }}" alt="logo" /> 
-        <div class="home">
-          <ul> 
-            <li><a  href="{{url_for('documentation')}}">   Documentation </a></li>
-            <li><a  href="{{url_for('index')}}">   Home </a></li>
-            
-          </ul>
-    
-        </div>
-        
-        <ul>
-            <li><a href="{{url_for('about_us')}}">About Us </a></li>
-            <li><a href="{{url_for('comp_analysis')}}">Complexity Analysis </a></li>
-            <!-- <li><a  href="">   Code Visualization</a></li> -->
-            <li><a  href="{{url_for('intro')}}">   Info </a></li>
-          </ul>
+      <img src="{{ url_for('static', filename='Images/logo.png') }}" alt="logo" /> 
+      <div class="home">
+        <ul> 
+          <li><a  href="{{url_for('demonstrate')}}">   Demonstrate </a></li>
+          <li><a  href="{{url_for('documentation')}}">   Documentation </a></li>
+          <li><a  href="{{url_for('index')}}">   Home </a></li>
+        </ul>
+  
       </div>
+      
+      <ul>
+        <li><a href="{{url_for('about_us')}}">About Us </a></li>
+        <li><a href="{{url_for('comp_analysis')}}">Complexity Analysis </a></li>
+        <!-- <li><a  href="">   Code Visualization</a></li> -->
+        
+        <li><a  href="{{url_for('algowriteup')}}">  Algorithm </a></li>
+        <li><a  href="{{url_for('intro')}}">   Info </a></li>
+      </ul>
+</div>
 <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -93,36 +95,78 @@
 
   <h1>DYNAMIC PROGRAMMING ALGORITHM</h1>
     <h2 id="introduction">FUNCTIONS</h2>
+    <br>
+
     <div class="introduction" style="text-align: justify;">
-      <h3 style="color: rgb(247, 247, 141);">1. jarvis_march(points):</h3>
+      <h3 style="color: rgb(247, 247, 141);">1. solve(string rna, vector<vector<int>>& traceback):</h3>
 
 
              <p><strong style="color: rgb(132, 221, 251);">Input:</strong></p>
 
             <ul>
-            <li>points: A list of tuples representing 2D points. Each tuple should contain the x and y coordinates of a point.</li>
+            <li>rna: A string representing a sequence of RNA nucleotides.</li>
+              <li>traceback: A 2D vector representing the traceback matrix to store split points.</li>
             </ul>
 
             <p><strong style="color: rgb(132, 221, 251);">Output:</strong></p>
 
             <ul>
-            <li>hull: A list of tuples representing the vertices of the convex hull. The vertices are ordered in a counterclockwise manner.</li>
+            <li>Returns an integer representing the maximum number of base pairs in the optimal secondary structure.</li>
             </ul>
 
             <p><strong style="color: rgb(132, 221, 251);">Mechanism of the function:</strong></p>
 
     
         <ul>
-            <li>The <b>jarvis_march</b> function begins by initializing variables and selecting the starting point with the minimum x-coordinate (and minimum y-coordinate if there's a tie).</li>
-            <li>It then enters a loop where it iterates through all points to find the next point that forms a counterclockwise turn with the current point, using the <b>checkCounterClockWise</b> function and considering distances using the <b>distance</b> function.</li>
-            <li>This loop continues until it returns to the starting point, completing the convex hull.</li>
-            <li>Specifically, it calls <b>checkCounterClockWise</b> to determine the orientation of points and <b>distance</b> to calculate distances between points.</li>
-            <li>These functions help in identifying the next point to add to the convex hull.</li>
+            <li>Initializes a matrix OPT to store optimal solutions for subproblems.</li>
+            <li>Iterates over possible lengths of subsequences (k) from 4 to n, where n is the length of the RNA sequence.</li>
+            <li>For each subsequence length k, iterates over all possible starting indices i and calculates the corresponding ending index j.</li>
+              <li>Considers two cases:</p=li>
+              <ul>
+                <li><strong>Case 1:</strong> No base pair is formed at position j, so the maximum number of pairs remains the same as the previous position.</li>
+                <li><strong>Case 2:</strong> Checks if a base pair can be formed between positions t and j. If yes, calculates the number of pairs formed by including this base pair.</li>
+              </ul>
+            <li>Updates the OPT matrix with the maximum number of pairs for the current subsequence length k.</li>
+            <li>Updates the traceback matrix with the split point for the current subsequence.</li>
+            <li>Returns the maximum number of pairs for the entire RNA sequence.</li>
+            
         </ul>
         <!-- <br>
         <img class="center-image" src="{{ url_for('static', filename='Images/JarvisMarch.png') }}" alt="Jarvis March Algorithm"  width="600" height="auto" />
         <br> -->
+        <br>
+
           
+        <h3 style="color: rgb(247, 247, 141);">2. tracebackSecondaryStructure(string rna, vector<vector<int> > traceback, string & structure)</h3>
+
+
+        <p><strong style="color: rgb(132, 221, 251);">Input:</strong></p>
+
+       <ul>
+       <li>rna: A string representing a sequence of RNA nucleotides.</li>
+        <li>traceback: A 2D vector representing the traceback matrix with split points.</li>
+        <li>structure: A string to store the secondary structure of the RNA sequence.</li>
+       </ul>
+
+       <p><strong style="color: rgb(132, 221, 251);">Output:</strong></p>
+
+       <ul>
+        <li>Returns a vector of pairs representing the indices of base pairs in the secondary structure.</li>
+       </ul>
+
+       <p><strong style="color: rgb(132, 221, 251);">Mechanism of the function:</strong></p>
+
+
+   <ul>
+       <li>Initializes a stack to store the split points for the secondary structure.</li>
+        <li>Recursively constructs the secondary structure by splitting the RNA sequence based on the split points stored in the traceback matrix.</li>
+        <li>Updates the structure string with the base pairs formed in the secondary structure.</li>
+        <li>Returns a vector of pairs representing the indices of base pairs in the secondary structure.</li>
+
+   </ul>
+   <!-- <br>
+   <img class="center-image" src="{{ url_for('static', filename='Images/JarvisMarch.png') }}" alt="Jarvis March Algorithm"  width="600" height="auto" />
+   <br> -->
     
 
         

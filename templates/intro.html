@@ -54,28 +54,44 @@
       list-style-type: disc;
       margin-left: 0px;
     }
+
+    .button-container {
+    display: flex;
+    justify-content: space-between; /* Align items with equal space between them */
+    list-style-type: none; /* Remove default list styles */
+    padding: 0; /* Remove default padding */
+    }
+
+    .button-left {
+    margin-right: auto; /* Push to the left end */
+    }
+
+    .button-right {
+    margin-left: auto; /* Center the button horizontally */
+    }
 </style>
 
 <body>
   <div class="navbar">
-    <img src="{{ url_for('static', filename='Images/logo.png') }}" alt="logo" width = "100" height = "auto"/> 
+    <img src="{{ url_for('static', filename='Images/logo.png') }}" alt="logo" /> 
     <div class="home">
       <ul> 
+        <li><a  href="{{url_for('demonstrate')}}">   Demonstrate </a></li>
         <li><a  href="{{url_for('documentation')}}">   Documentation </a></li>
         <li><a  href="{{url_for('index')}}">   Home </a></li>
-        
       </ul>
 
     </div>
     
     <ul>
-        <li><a href="{{url_for('about_us')}}">About Us </a></li>
-        <li><a href="{{url_for('comp_analysis')}}">Complexity Analysis </a></li>
-        <!-- <li><a  href="">   Code Visualization</a></li> -->
-        <li><a  href="{{url_for('intro')}}">   Info </a></li>
+      <li><a href="{{url_for('about_us')}}">About Us </a></li>
+      <li><a href="{{url_for('comp_analysis')}}">Complexity Analysis </a></li>
+      <!-- <li><a  href="">   Code Visualization</a></li> -->
+      
+      <li><a  href="{{url_for('algowriteup')}}">  Algorithm </a></li>
+      <li><a  href="{{url_for('intro')}}">   Info </a></li>
     </ul>
-    </div>
-  </div>
+</div>
 
   <h1>INTRODUCTION</h1>
 
@@ -84,10 +100,18 @@
     
     <p>Dynamic programming is a powerful algorithmic technique frequently employed to solve optimization problems by breaking them down into simpler subproblems. In the context of RNA folding, dynamic programming algorithms, like the Nussinov algorithm or the Zuker algorithm, use a recurrence relation to efficiently compute the optimal secondary structure of an RNA molecule.
     </p>
-    
 
-
+    <p>As a part of this assignment, we have implemented the Dynamic Programming method to solve the RNA Folding problem</p>
   </div>
+
+  <nav>
+    <ul class="button-container">
+      <li class="button-left"><a href="{{url_for('algowriteup')}}">  More about Problem Statement </a></li>
+      <li class="button-right"><a href="{{url_for('algorithm')}}"> DP Algorithm</a></li>
+      <li></li>
+     
+    </ul>
+  
 
 
   <div class="footer">

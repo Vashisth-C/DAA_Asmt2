@@ -1,46 +1,31 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>DAA ASSIGNMENT</title>
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="{{ url_for('static', filename='CSS/style.css') }}"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="{{ url_for('static', filename='CSS/navigation.css') }}"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      href="{{ url_for('static', filename='Images/logo.png') }}"
-    />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script>
-        $(document).ready(function(){
-            $("#showOutput").click(function(){
-                $.ajax({
-                    url: "/get_output",
-                    success: function(result){
-                        $("#outputTextArea").val(result);
-                    }
-                });
-            });
-            $("#showImageButton").click(function(){
-                $("#svgImage").attr("src", "{{ url_for('static', filename='Images/rna.svg') }}?" + new Date().getTime());
-                $("#svgImage").show();
-            });
+<head>
+  <title>DAA ASSIGNMENT</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='CSS/style.css') }}" />
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='CSS/navigation.css') }}" />
+  <link rel="icon" type="image/png" href="{{ url_for('static', filename='Images/logo.png') }}" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $("#showOutput").click(function () {
+        $.ajax({
+          url: "/get_output",
+          success: function (result) {
+            $("#outputTextArea").val(result);
+          },
         });
-    </script>
-    <style>
-      #svgImage {
-          display: none; /* Initially hide the image */
-      }
-  </style>
-  </head>
+      });
+      $("#showImageButton").click(function () {
+        $("#svgImage").attr("src", "{{ url_for('static', filename='Images/rna.svg') }}?" + new Date().getTime());
+        $("#svgImage").show();
+      });
+    });
+  </script>
   <style>
+    #svgImage {
+      display: none; /* Initially hide the image */
+    }
     .member {
       display: flex;
       background-color: black;
@@ -55,6 +40,7 @@
       padding: 0px;
       max-width: 100%;
       position: relative;
+      /* color: white; */
     }
     h1 {
       margin-top: 3%;
@@ -93,44 +79,66 @@
       margin-right: auto;
       margin-top: 10px;
     }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    textarea,
+    input[type="submit"],
+    button {
+      color: black;
+    }
   </style>
 
   <body>
     <div class="navbar">
-      <img
-        src="{{ url_for('static', filename='Images/logo.png') }}"
-        alt="logo"
-      />
+      <img src="{{ url_for('static', filename='Images/logo.png') }}" alt="logo" /> 
       <div class="home">
-        <ul>
-          <li><a href="{{url_for('documentation')}}"> Documentation </a></li>
-          <li><a href="{{url_for('index')}}"> Home </a></li>
+        <ul> 
+          <li><a  href="{{url_for('demonstrate')}}">   Demonstrate </a></li>
+          <li><a  href="{{url_for('documentation')}}">   Documentation </a></li>
+          <li><a  href="{{url_for('index')}}">   Home </a></li>
         </ul>
+  
       </div>
-
+      
       <ul>
         <li><a href="{{url_for('about_us')}}">About Us </a></li>
         <li><a href="{{url_for('comp_analysis')}}">Complexity Analysis </a></li>
         <!-- <li><a  href="">   Code Visualization</a></li> -->
-        <li><a href="{{url_for('intro')}}"> Info </a></li>
+        
+        <li><a  href="{{url_for('algowriteup')}}">  Algorithm </a></li>
+        <li><a  href="{{url_for('intro')}}">   Info </a></li>
       </ul>
     </div>
-    <form action="/submit" method="post">
-      <label for="content">Enter content:</label><br>
-      <textarea id="content" name="content" rows="4" cols="50"></textarea><br>
-      <input type="submit" value="Submit">
-  </form>
-    <form method="post" action="/run_cpp">
-      <button type="submit">Run C++ Code</button>
-  </form>
-  <div id="output"></div>
-  <button id="showOutput">Show Output</button>
-    <br><br>
-    <textarea id="outputTextArea" rows="10" cols="50"></textarea>
-    
-    <button id="showImageButton">Show Image</button>
-    <br><br>
-    <img id="svgImage" src="{{ url_for('static', filename='Images/rna.svg') }}" alt="SVG Image">
+    <div class="container">
+      <form action="/submit" method="post">
+        <label for="content">Enter content:</label><br />
+        <textarea id="content" name="content" rows="4" cols="50"></textarea
+        ><br />
+        <input type="submit" value="Submit" />
+      </form>
+      <form method="post" action="/run_cpp">
+        <button type="submit">Run C++ Code</button>
+      </form>
+      <div id="output"></div>
+      <button id="showOutput">Show Output</button>
+      <br /><br />
+      <textarea id="outputTextArea" rows="10" cols="50"></textarea>
+
+      <button id="showImageButton">Show Image</button>
+      <br /><br />
+    </div>
+    <img
+      id="svgImage"
+      src="{{ url_for('static', filename='Images/rna.svg') }}"
+      alt="SVG Image"
+    />
     <div class="footer">
       We, the students of BITS Pilani Hyderabad Campus, have created this
       webpage, as a part of the Assignment-1 of the course CS F364 - Design and
