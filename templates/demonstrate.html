@@ -20,7 +20,8 @@
             url: $(this).attr("action"),
             data: formData,
             success: function(response) {
-                $("#outputTextArea").val(response);
+                $("#outputTextArea").val(response.output_content);
+                $("#dotbrac").val(response.output_content1);
                 // Show the image after successful response
                 showImage();
             }
@@ -37,6 +38,7 @@
         // Reset textarea and hide image
         $("#content").val("");
         $("#outputTextArea").val("");
+        $("#dotbrac").val("");
         $("#content").prop("readonly", false);
         $("#svgImage").hide();
     });
@@ -141,6 +143,7 @@
       <form action="/submit" method="post" style="margin-top: 10%; margin-bottom: 10%;">
         <label for="content" style="color: white">Enter content:</label><br />
         <textarea id="content" name="content" rows="4" cols="50" style="margin-bottom: 10%; margin-top: 3%;border: solid 1px; border-radius: 10px; padding: 2%;"></textarea><br>
+        <textarea id="dotbrac" rows="4" cols="50" readonly></textarea><br>
         <textarea id="outputTextArea" rows="10" cols="50" readonly style="margin-bottom: 5%; border: solid 1px; border-radius: 10px; padding: 2%;"></textarea><br>
         <input type="submit" value="Submit" style="background-color: white; width: 10%;"/><br>
         <img

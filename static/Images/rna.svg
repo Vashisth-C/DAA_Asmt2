@@ -34,6 +34,7 @@
   </style>
 
   <rect style="stroke: white; fill: white" height="452" x="0" y="0" width="452" onclick="click(evt)" />
+<<<<<<< HEAD
   <g transform="scale(2.706286,2.706286) translate(-20.160690,36.264843)">
     <polyline class="backbone" id="outline" points="
       86.521,-28.765
@@ -98,6 +99,38 @@
       <text class="nucleotide" x="108.473" y="2.047">A</text>
       <text class="nucleotide" x="107.567" y="-12.926">G</text>
       <text class="nucleotide" x="113.613" y="-28.765">C</text>
+=======
+  <g transform="scale(6.122061,6.122061) translate(-47.483948,-47.483948)">
+    <polyline class="backbone" id="outline" points="
+      86.068,72.125
+      75.461,82.732
+      59.489,86.451
+      54.984,102.219
+      66.580,113.815
+      82.348,109.310
+      86.068,93.338
+      96.674,82.732
+      110.294,78.759
+      113.815,65.016
+      103.783,54.984
+    " />
+    <g id="pairs">
+      <line class="basepairs" id="1,8" x1="86.06752" y1="72.12511" x2="96.67413" y2="82.73172" />
+      <line class="basepairs" id="2,7" x1="75.46092" y1="82.73172" x2="86.06752" y2="93.33832" />
+    </g>
+    <g transform="translate(-4.6, 4)" id="seq">
+      <text class="nucleotide" x="86.068" y="72.125">A</text>
+      <text class="nucleotide" x="75.461" y="82.732">C</text>
+      <text class="nucleotide" x="59.489" y="86.451">G</text>
+      <text class="nucleotide" x="54.984" y="102.219">U</text>
+      <text class="nucleotide" x="66.580" y="113.815">A</text>
+      <text class="nucleotide" x="82.348" y="109.310">C</text>
+      <text class="nucleotide" x="86.068" y="93.338">G</text>
+      <text class="nucleotide" x="96.674" y="82.732">U</text>
+      <text class="nucleotide" x="110.294" y="78.759">A</text>
+      <text class="nucleotide" x="113.815" y="65.016">G</text>
+      <text class="nucleotide" x="103.783" y="54.984">C</text>
+>>>>>>> 90dd29cecbbe0808704c13a4d2d1bbe965625016
     </g>
   </g>
 </svg>

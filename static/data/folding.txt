@@ -1,2 +1,7 @@
+<<<<<<< HEAD
 ACGUAGCUGACUGAUCGUAGCUAGC
 .(.(((((((....))..)))))).
+=======
+ACGUACGUAGC
+((....))...
+>>>>>>> 90dd29cecbbe0808704c13a4d2d1bbe965625016

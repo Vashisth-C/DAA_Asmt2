@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Optimal pairs: 8
 (1 23), (C G)
 (3 22), (U A)
@@ -7,3 +8,8 @@ Optimal pairs: 8
 (7 18), (U A)
 (8 15), (G C)
 (9 14), (A U)
+=======
+Optimal pairs: 2
+(0 7), (A U)
+(1 6), (C G)
+>>>>>>> 90dd29cecbbe0808704c13a4d2d1bbe965625016
