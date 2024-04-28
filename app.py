@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request
 from flask_cors import CORS
+import time
 import subprocess
 
 app = Flask(__name__)
@@ -38,22 +39,21 @@ def intro():
 def demo():
     return render_template('demonstrate.html')
 
-@app.route('/run_cpp', methods=['POST'])
-def run_cpp_code():
-    cpp_executable_path = './a.out'
-    subprocess.Popen([cpp_executable_path])
-    return render_template('demonstrate.html')
-
 @app.route('/submit', methods=['POST'])
 def submit():
     content = request.form['content']
-    # Write content to a file in the static folder
     with open('static/data/input.txt', 'w') as f:
         f.write(content)
-    return render_template('demonstrate.html')
 
-@app.route('/get_output')
-def get_output():
+    content_length = len(str(len(content)))
+    base_pause_duration = 0.5
+    pause_duration = base_pause_duration * content_length
+
+    cpp_executable_path = './a.out'
+    time.sleep(pause_duration)
+    subprocess.Popen([cpp_executable_path])
+    time.sleep(pause_duration)
+
     with open('static/data/output.txt', 'r') as file:
         output_content = file.read()
     return output_content

@@ -8,19 +8,39 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script>
     $(document).ready(function () {
-      $("#showOutput").click(function () {
+    // Submit form using AJAX
+    $("form").submit(function(event) {
+        event.preventDefault(); // Prevent form submission
+        // Serialize form data
+        var formData = $(this).serialize();
+        $("#content").prop("readonly", true);
+        // Send AJAX POST request
         $.ajax({
-          url: "/get_output",
-          success: function (result) {
-            $("#outputTextArea").val(result);
-          },
+            type: 'POST',
+            url: $(this).attr("action"),
+            data: formData,
+            success: function(response) {
+                $("#outputTextArea").val(response);
+                // Show the image after successful response
+                showImage();
+            }
         });
-      });
-      $("#showImageButton").click(function () {
+    });
+
+    // Function to show image
+    function showImage() {
         $("#svgImage").attr("src", "{{ url_for('static', filename='Images/rna.svg') }}?" + new Date().getTime());
         $("#svgImage").show();
-      });
+    }
+
+    $("#refreshButton").click(function () {
+        // Reset textarea and hide image
+        $("#content").val("");
+        $("#outputTextArea").val("");
+        $("#content").prop("readonly", false);
+        $("#svgImage").hide();
     });
+});
   </script>
   <style>
     #svgImage {
@@ -120,26 +140,18 @@
     <div class="container">
       <form action="/submit" method="post">
         <label for="content">Enter content:</label><br />
-        <textarea id="content" name="content" rows="4" cols="50"></textarea
-        ><br />
-        <input type="submit" value="Submit" />
+        <textarea id="content" name="content" rows="4" cols="50"></textarea><br>
+        <textarea id="outputTextArea" rows="10" cols="50" readonly></textarea><br>
+        <input type="submit" value="Submit" /><br>
+        <img
+        id="svgImage"
+        src="{{ url_for('static', filename='Images/rna.svg') }}"
+        alt="SVG Image"
+        /><br>
+        <button type="button" id="refreshButton">Refresh</button><br>
       </form>
-      <form method="post" action="/run_cpp">
-        <button type="submit">Run C++ Code</button>
-      </form>
-      <div id="output"></div>
-      <button id="showOutput">Show Output</button>
-      <br /><br />
-      <textarea id="outputTextArea" rows="10" cols="50"></textarea>
-
-      <button id="showImageButton">Show Image</button>
-      <br /><br />
     </div>
-    <img
-      id="svgImage"
-      src="{{ url_for('static', filename='Images/rna.svg') }}"
-      alt="SVG Image"
-    />
+    
     <div class="footer">
       We, the students of BITS Pilani Hyderabad Campus, have created this
       webpage, as a part of the Assignment-1 of the course CS F364 - Design and
