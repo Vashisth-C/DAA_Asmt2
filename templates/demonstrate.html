@@ -137,9 +137,9 @@
         <li><a  href="{{url_for('intro')}}">   Info </a></li>
       </ul>
     </div>
-    <div class="container">
-      <form action="/submit" method="post">
-        <label for="content">Enter content:</label><br />
+    <div class="container" style="background-color: rgba(77, 76, 76, 0.2);border: solid white; border-radius: 30px; height: fit-content;">
+      <form action="/submit" method="post" style="margin-top: 10%; margin-bottom: 10%;">
+        <label for="content" style="color: white;">Enter content:</label><br />
         <textarea id="content" name="content" rows="4" cols="50"></textarea><br>
         <textarea id="outputTextArea" rows="10" cols="50" readonly></textarea><br>
         <input type="submit" value="Submit" /><br>
