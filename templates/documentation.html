@@ -99,14 +99,14 @@
     <br>
 
     <div class="introduction" style="text-align: justify;">
-      <h3 style="color: rgb(247, 247, 141);">1. solve(string rna, vector<vector<int>>& traceback):</h3>
+      <h3 style="color: rgb(247, 247, 141);">1. foldingAlgorithm(string rna, vector< vector< int>>& dp) </h3>
 
 
              <p><strong style="color: rgb(132, 221, 251);">Input:</strong></p>
 
             <ul>
             <li>rna: A string representing a sequence of RNA nucleotides.</li>
-              <li>traceback: A 2D vector representing the traceback matrix to store split points.</li>
+              <li>dp: A 2D vector representing the traceback matrix to store split points.</li>
             </ul>
 
             <p><strong style="color: rgb(132, 221, 251);">Output:</strong></p>
@@ -128,7 +128,7 @@
                 <li><strong>Case 2:</strong> Checks if a base pair can be formed between positions t and j. If yes, calculates the number of pairs formed by including this base pair.</li>
               </ul>
             <li>Updates the OPT matrix with the maximum number of pairs for the current subsequence length k.</li>
-            <li>Updates the traceback matrix with the split point for the current subsequence.</li>
+            <li>Updates the dp matrix with the split point for the current subsequence.</li>
             <li>Returns the maximum number of pairs for the entire RNA sequence.</li>
             
         </ul>
@@ -138,21 +138,20 @@
         <br>
 
           
-        <h3 style="color: rgb(247, 247, 141);">2. tracebackSecondaryStructure(string rna, vector<vector<int> > traceback, string & structure)</h3>
+        <h3 style="color: rgb(247, 247, 141);">2. generateStructure(string rna, vector< vector< int>> dp)</h3>
 
 
         <p><strong style="color: rgb(132, 221, 251);">Input:</strong></p>
 
        <ul>
        <li>rna: A string representing a sequence of RNA nucleotides.</li>
-        <li>traceback: A 2D vector representing the traceback matrix with split points.</li>
-        <li>structure: A string to store the secondary structure of the RNA sequence.</li>
+        <li>dp: A 2D vector representing the traceback matrix with split points.</li>
        </ul>
 
        <p><strong style="color: rgb(132, 221, 251);">Output:</strong></p>
 
        <ul>
-        <li>Returns a vector of pairs representing the indices of base pairs in the secondary structure.</li>
+        <li>Returns a pair of vector of pairs representing the indices and nucleotides of base pairs and dot and bracket notation in the secondary structure.</li>
        </ul>
 
        <p><strong style="color: rgb(132, 221, 251);">Mechanism of the function:</strong></p>
@@ -160,7 +159,7 @@
 
    <ul>
        <li>Initializes a stack to store the split points for the secondary structure.</li>
-        <li>Recursively constructs the secondary structure by splitting the RNA sequence based on the split points stored in the traceback matrix.</li>
+        <li>Recursively constructs the secondary structure by splitting the RNA sequence based on the split points stored in the dp matrix.</li>
         <li>Updates the structure string with the base pairs formed in the secondary structure.</li>
         <li>Returns a vector of pairs representing the indices of base pairs in the secondary structure.</li>
 
