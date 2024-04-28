@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, jsonify
 from flask_cors import CORS
 import time
 import subprocess
@@ -56,7 +56,11 @@ def submit():
 
     with open('static/data/output.txt', 'r') as file:
         output_content = file.read()
-    return output_content
+
+    with open('static/data/dotBracNotation.txt', 'r') as file:
+        output_content1 = file.read()
+    
+    return jsonify({'output_content': output_content, 'output_content1': output_content1})
 
 @app.route('/demonstrate')
 def demonstrate():
