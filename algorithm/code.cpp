@@ -27,7 +27,7 @@ int solve(string rna, vector<vector<int>>& traceback)
                     if (t > i)
                         c += OPT[i][t-1];
                     if (t + 1 < j)
-                        c += OPT[t+1][j-1]; //
+                        c += OPT[t+1][j-1];
                     if (c > max) 
                     {
                         max = c;
@@ -42,10 +42,11 @@ int solve(string rna, vector<vector<int>>& traceback)
     return OPT[0][n - 1];
 }
 
-pair<vector<pair<int, int>>, string> tracebackSecondaryStructure(string rna, vector<vector<int>> traceback, string structure) {
+pair<vector<pair<int, int>>, string> tracebackSecondaryStructure(string rna, vector<vector<int>> traceback) {
     int n = rna.size();
     stack<pair<int, int>> segments;
     vector <pair<int, int> > pairs;
+    string structure(n, '.');
 
     segments.push(make_pair(0, n - 1));
     while (!segments.empty()) 
@@ -75,40 +76,47 @@ pair<vector<pair<int, int>>, string> tracebackSecondaryStructure(string rna, vec
 int main() {
     string rna;
 
-    ifstream file("./static/data/input.txt"); // Open the file
+    ifstream inputFile("./static/data/input.txt");
     string line;
-    if (file.is_open()) {
-        while (getline(file, line)) {
+    if (inputFile.is_open()) {
+        while (getline(inputFile, line)) {
             cout << line << endl;
             rna = line;
         }
-        file.close();
+        inputFile.close();
     } else {
         cerr << "Unable to open file" << endl;
     }
 
     int n = rna.size();
     vector<vector<int>> traceback(n, vector<int>(n, -1));
-    string structure(n, '.');
 
     int ans = solve(rna, traceback);
-    pair<vector<pair<int, int>>, string> folding = tracebackSecondaryStructure(rna, traceback, structure);
+    pair<vector<pair<int, int>>, string> folding = tracebackSecondaryStructure(rna, traceback);
 
-    ofstream outFile("./static/data/folding.txt");
-    if (!outFile.is_open()) {
+    ofstream foldingOutput("./static/data/folding.txt");
+    if (!foldingOutput.is_open()) {
         cerr << "Failed to open the file!" << endl;
-        return 1; // Return error code
+        return 1;
     }
-    outFile << rna << endl;
-    outFile << folding.second << endl;
-    outFile.close();
+    foldingOutput << rna << endl;
+    foldingOutput << folding.second << endl;
+    foldingOutput.close();
 
-    ofstream outFile1("./static/data/output.txt");
-    outFile1 <<"Optimal pairs: " << ans << endl;
+    ofstream optimalPairs("./static/data/output.txt");
+    optimalPairs <<"Optimal pairs: " << ans << endl;
     for(auto x: folding.first){
-        outFile1 << x.first<<" "<<x.second<<endl;
+        optimalPairs << x.first<<" "<<x.second<<endl;
     }
-    outFile1.close();
+    optimalPairs.close();
+
+    ofstream dotBrac("./static/data/dotBracNotation.txt");
+    if (!dotBrac.is_open()) {
+        cerr << "Failed to open the file!" << endl;
+        return 1;
+    }
+    dotBrac << folding.second << endl;
+    dotBrac.close();
 
     system("./static/shell/run1.sh");
     
