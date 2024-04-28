@@ -2,13 +2,19 @@ import matplotlib.pyplot as plt
 from matplotlib.patches import Arc
 
 dots = []
+seq = []
 with open('./static/data/dotBracNotation.txt', 'r') as file:
     content = file.read()
 for i in content:
     dots.append(i)
 dots = dots[0:-1]
 
-def plot_rna_structure(dot_bracket):
+with open('./static/data/input.txt', 'r') as file:
+    content = file.read()
+for i in content:
+    seq.append(i)
+
+def plot_rna_structure(dot_bracket, sequence):
     # Calculate the total number of nucleotides
     num_nucleotides = len(dot_bracket)
     
@@ -33,9 +39,13 @@ def plot_rna_structure(dot_bracket):
             arc = Arc(((start_index+end_index)/2,0), end_index-start_index, 0.05*(end_index-start_index), angle=0, theta1=0, theta2=180, color='red')
             plt.gca().add_patch(arc)
     
+    # Add text annotations below each point
+    for i, (x_coord, nucleotide) in enumerate(zip(x, sequence)):
+        plt.text(x_coord, -0.1, nucleotide, ha='center', va='top')
+    
     plt.xlim(-1, num_nucleotides)
-    plt.ylim(-1, 1)
+    plt.ylim(-1, num_nucleotides)
     plt.gca().axes.get_yaxis().set_visible(False)
     plt.savefig('./static/Images/dotbrac.png')
 
-plot_rna_structure(dots)
+plot_rna_structure(dots, seq)
