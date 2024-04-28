@@ -7,6 +7,16 @@
   <link rel="icon" type="image/png" href="{{ url_for('static', filename='Images/logo.png') }}" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script>
+    function validateInput() {
+            var input = document.getElementById('content').value;
+            var pattern = /^[AUGC]+$/;
+            if (!pattern.test(input)) {
+                alert("Wrong input! Only A, U, G, and C are allowed.");
+                location.reload();
+                return false;
+            }
+            return true;
+        }
     $(document).ready(function () {
     // Submit form using AJAX
     $("form").submit(function(event) {
@@ -140,7 +150,7 @@
       </ul>
     </div>
     <div class="container" style="background-color: rgba(77, 76, 76, 0.2);border: solid white; border-radius: 30px; height: fit-content; margin-top: 2%;">
-      <form action="/submit" method="post" style="margin-top: 10%; margin-bottom: 10%;">
+      <form action="/submit" method="post" style="margin-top: 10%; margin-bottom: 10%;" onsubmit="return validateInput();">
         <label for="content" style="color: white">Enter RNA String:</label><br />
         <textarea id="content" name="content" rows="4" cols="50" style="margin-bottom: 5%; margin-top: 3%;border: solid 1px; border-radius: 10px; padding: 2%;"></textarea><br>
         <label for="dotbrac" style="color: white">Dot Bracket Notation:</label><br />
@@ -148,17 +158,17 @@
         <label for="outputTextArea" style="color: white">Optimal Pairs:</label><br />
         <textarea id="outputTextArea" rows="10" cols="50" readonly style="margin-bottom: 5%;margin-top: 3%; border: solid 1px; border-radius: 10px; padding: 2%;"></textarea><br>
         <div style="display: flex; justify-content: space-evenly;">
-          <input type="submit" value="Submit" style="background-color: white; width: 25%; padding-top: 1%; padding-bottom: 1%;border: solid 1px ;border-radius: 7px;"/><br>
-          <button type="button" id="refreshButton" style="background-color: white; width: 25%; padding-top: 1%; padding-bottom: 1%;  border-radius: 2px; border: solid 1px ;border-radius: 7px;">Refresh</button><br>
+            <input type="submit" value="Submit" style="background-color: white; width: 25%; padding-top: 1%; padding-bottom: 1%;border: solid 1px ;border-radius: 7px;"/><br>
+            <button type="button" id="refreshButton" style="background-color: white; width: 25%; padding-top: 1%; padding-bottom: 1%;  border-radius: 2px; border: solid 1px ;border-radius: 7px;">Refresh</button><br>
         </div>
         
         <img
-        id="svgImage"
-        src="{{ url_for('static', filename='Images/rna.svg') }}"
-        alt="SVG Image"
-        style="margin-top: 5%; margin-bottom: 5%;"
+            id="svgImage"
+            src="{{ url_for('static', filename='Images/rna.svg') }}"
+            alt="SVG Image"
+            style="margin-top: 5%; margin-bottom: 5%;"
         /><br>
-      </form>
+    </form>
     </div>
     
     <div class="footer">
