@@ -6,7 +6,7 @@
 #include<string>
 using namespace std;
 
-int solve(string rna, vector<vector<int>>& dp) 
+int foldingAlgorithm(string rna, vector<vector<int>>& dp) 
 {
     int n = rna.size();
     vector<vector<int>> OPT(n, vector<int>(n, 0));
@@ -46,7 +46,7 @@ pair<vector<pair<pair<int, int>, pair<char, char>>>, string> generateStructure(s
     int n = rna.size();
     stack<pair<int, int>> segments;
     vector<pair<pair<int, int>, pair<char, char>>> pairs;
-    string structure(n, '.');
+    string dotBracket(n, '.');
 
     segments.push(make_pair(0, n - 1));
     while (!segments.empty()) 
@@ -63,14 +63,14 @@ pair<vector<pair<pair<int, int>, pair<char, char>>>, string> generateStructure(s
             segments.push(make_pair(i, j-1));
         else
         {
-            structure[splitPoint] = '(';
-            structure[j] = ')';
+            dotBracket[splitPoint] = '(';
+            dotBracket[j] = ')';
             pairs.push_back(make_pair(make_pair(splitPoint, j),make_pair(rna[splitPoint],rna[j])));
             segments.push(make_pair(i, splitPoint-1));
             segments.push(make_pair(splitPoint+1, j-1));
         }
     }
-    return make_pair(pairs,structure);
+    return make_pair(pairs,dotBracket);
 }
 
 int main() {
@@ -91,7 +91,7 @@ int main() {
     int n = rna.size();
     vector<vector<int>> dp(n, vector<int>(n, -1));
 
-    int ans = solve(rna, dp);
+    int ans = foldingAlgorithm(rna, dp);
     pair<vector<pair<pair<int, int>, pair<char, char>>>, string> folding = generateStructure(rna, dp);
 
     ofstream foldingOutput("./static/data/folding.txt");
