@@ -1,8 +1,1 @@
-Optimal pairs: 7
-(3 25), (C G)
-(5 24), (C G)
-(6 23), (U A)
-(7 22), (G C)
-(8 19), (A U)
-(10 18), (A U)
-(12 17), (A U)
+Optimal pairs: 0

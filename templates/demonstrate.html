@@ -41,6 +41,8 @@
     function showImage() {
         $("#svgImage").attr("src", "{{ url_for('static', filename='Images/rna.svg') }}?" + new Date().getTime());
         $("#svgImage").show();
+        $("#pngImage").attr("src", "{{ url_for('static', filename='Images/dotbrac.png') }}?" + new Date().getTime());
+        $("#pngImage").show();
     }
 
     $("#refreshButton").click(function () {
@@ -50,11 +52,15 @@
         $("#dotbrac").val("");
         $("#content").prop("readonly", false);
         $("#svgImage").hide();
+        $("#pngImage").hide();
     });
 });
   </script>
   <style>
     #svgImage {
+      display: none; /* Initially hide the image */
+    }
+    #pngImage {
       display: none; /* Initially hide the image */
     }
     .member {
@@ -166,6 +172,12 @@
             id="svgImage"
             src="{{ url_for('static', filename='Images/rna.svg') }}"
             alt="SVG Image"
+            style="margin-top: 5%; margin-bottom: 10%; width: 40vw;"
+        /><br>
+        <img
+            id="pngImage"
+            src="{{ url_for('static', filename='Images/dotbrac.png') }}"
+            alt="png image"
             style="margin-top: 5%; margin-bottom: 10%; width: 40vw;"
         /><br>
     
