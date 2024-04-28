@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RNA Folding Diagram</title>
+<style>
+    #rnaContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    .rnaDiagram {
+        font-size: 24px;
+    }
+</style>
+</head>
+<body>
+<div id="rnaContainer">
+    <div class="rnaDiagram" id="rnaDiagram"></div>
+</div>
+
+<script>
+function generateRNAFolding(dotBracketNotation) {
+    let rnaDiagram = '';
+    let stack = [];
+
+    for (let i = 0; i < dotBracketNotation.length; i++) {
+        if (dotBracketNotation[i] === '(') {
+            stack.push(i);
+        } else if (dotBracketNotation[i] === ')') {
+            let j = stack.pop();
+            rnaDiagram += `<span>${dotBracketNotation[j]}</span>`;
+            rnaDiagram += '-';
+            rnaDiagram += `<span>${dotBracketNotation[i]}</span>`;
+            rnaDiagram += '<br>';
+        } else {
+            rnaDiagram += `<span>${dotBracketNotation[i]}</span>`;
+        }
+    }
+
+    document.getElementById('rnaDiagram').innerHTML = rnaDiagram;
+}
+
+// Example dot bracket notation
+let dotBracketNotation = '(((...(((..(((..)))...)))...)))';
+
+generateRNAFolding(dotBracketNotation);
+</script>
+</body>
+</html>

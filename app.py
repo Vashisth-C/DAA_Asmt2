@@ -59,7 +59,7 @@ def submit():
 
     with open('static/data/dotBracNotation.txt', 'r') as file:
         output_content1 = file.read()
-    
+    subprocess.Popen(["python", "./algorithm/plotting.py"])
     return jsonify({'output_content': output_content, 'output_content1': output_content1})
 
 @app.route('/demonstrate')
